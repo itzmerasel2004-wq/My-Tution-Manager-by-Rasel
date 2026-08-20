@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#4b24ff"><title>My Tuition Manager V10 Pro</title>
+<style>
+:root{--p:#4b24ff;--p2:#087ff5;--g:#08b957;--r:#ef233c;--o:#ff9f0a;--ink:#101828;--mut:#667085;--bg:#f6f8fc;--card:#fff;--line:#e5eaf0;--shadow:0 8px 28px rgba(30,40,70,.08);--rad:20px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.dark{--bg:#080d14;--card:#151d27;--ink:#ffffff;--mut:#d7e0ea;--line:#354251;--shadow:0 10px 30px #0008}.app{max-width:640px;margin:auto;min-height:100vh;padding-bottom:92px}.hidden{display:none!important}.offline{background:#050505;color:#fff;text-align:center;padding:6px;font-size:12px}.top{position:sticky;top:0;z-index:40;background:#fffffff2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:9px 13px}.dark .top,.dark .bottom{background:#151b23f2}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{font-weight:900;font-size:17px}.mut{color:var(--mut)}.dark .mut{color:#d7e0ea}.dark .field label,.dark .small{color:#d7e0ea}.dark .overviewCard .mut{color:#dce5ef}.dark input::placeholder,.dark textarea::placeholder{color:#aeb9c7}.dark .nav{color:#d1d9e3}.dark .nav.active{color:#fff}.overviewCard{position:relative;overflow:hidden;border-radius:22px;min-height:126px}.overviewCard:after{content:'';position:absolute;right:-24px;bottom:-28px;width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,#4b24ff22,#087ff522);pointer-events:none}.overviewIcon{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#4b24ff18,#087ff518);font-size:22px}.overviewValue{font-size:24px;font-weight:900;letter-spacing:-.02em}.overviewTitle{font-weight:800}.overviewSub{color:var(--mut)}.dark .overviewSub{color:#d7e0ea}.bottom .nav{transition:transform .08s ease}.bottom .nav:active{transform:scale(.94)}button,input,select,textarea{font:inherit}button{cursor:pointer}.ib,.menuBtn,.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:10px 13px}.menuBtn{border:0;color:#fff;background:linear-gradient(135deg,var(--p),#7130ff)}.btn{font-weight:800}.green{background:var(--g);border:0;color:#fff}.blue{background:var(--p2);border:0;color:#fff}.red{background:var(--r);border:0;color:#fff}.purple{background:linear-gradient(135deg,var(--p),#7130ff);border:0;color:#fff}.yellow{background:#fff0a0;color:#5b4c00;border:0}.orange{background:#ff9f0a;color:#fff;border:0}.page{display:none;padding:15px 13px}.page.active{display:block}.hero{color:#fff;border-radius:28px;padding:23px;background:linear-gradient(135deg,#4b22ff,#0aaee8);box-shadow:var(--shadow)}.hero h1{font-size:33px;margin:5px 0}.live{margin-top:14px;padding:11px;border:1px solid #ffffff55;border-radius:15px;background:#ffffff15}.dot{display:inline-block;width:9px;height:9px;background:#62ff9a;border-radius:50%;margin-right:7px}.clock{height:190px;display:grid;place-items:center}.analogClock{display:grid;place-items:center;margin-top:6px}.clockFace{width:88px;height:88px;border:4px solid #fff;border-radius:50%;background:#ffffff18;position:relative;box-shadow:0 5px 18px #0003}.clockFace:before{content:'';position:absolute;inset:7px;border:1px solid #ffffff55;border-radius:50%}.tick{position:absolute;color:#fff;font-size:9px;font-weight:900;line-height:1}.t12{top:5px;left:50%;transform:translateX(-50%)}.t3{right:5px;top:50%;transform:translateY(-50%)}.t6{bottom:5px;left:50%;transform:translateX(-50%)}.t9{left:5px;top:50%;transform:translateY(-50%)}.clockHand{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;border-radius:8px;z-index:3}.hourHand{width:4px;height:24px;background:#fff}.minuteHand{width:3px;height:31px;background:#dcecff}.secondHand{width:2px;height:35px;background:#ff7a7a}.clockPin{position:absolute;width:8px;height:8px;border-radius:50%;background:#fff;left:calc(50% - 4px);top:calc(50% - 4px);z-index:5}.miniClock{margin-top:3px;font-size:16px}.miniClock b{display:inline-block;padding:2px 6px;border-radius:8px;background:#ffffff22}.face{width:165px;height:165px;border:7px solid var(--p);border-radius:50%;background:var(--card);position:relative}.hand{position:absolute;left:50%;bottom:50%;width:4px;height:62px;background:#111;transform-origin:bottom;border-radius:5px}.hm{height:50px}.hs{height:73px;width:2px;background:red}.pin{position:absolute;width:12px;height:12px;border-radius:50%;background:#111;left:calc(50% - 6px);top:calc(50% - 6px)}.search{display:flex;gap:8px;background:var(--card);border:1px solid var(--line);padding:12px;border-radius:16px}.search input{border:0;outline:0;background:transparent;color:var(--ink);width:100%}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric,.card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:15px;box-shadow:var(--shadow);margin:10px 0}.metric b{display:block;font-size:23px;margin-top:4px}.section{margin-top:18px}.section h2{margin:0 0 11px;font-size:23px}.badge{font-size:12px;padding:5px 9px;border-radius:99px;font-weight:800}.bgreen{background:#ddfbe7;color:#08743a}.bred{background:#ffe0e5;color:#a40018}.bblue{background:#e0efff;color:#0759aa}.byellow{background:#fff3b0;color:#655000}.student{border-left:5px solid var(--g)}.student.end{border-left-color:var(--o)}.student.arch{border-left-color:#777}.student h3{margin:0 0 5px;font-size:20px}.meta{line-height:1.55}.progress{height:8px;background:#edf1f5;border-radius:99px;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,#05af48,#12d37b)}.btnrow{display:flex;gap:8px;margin-top:9px}.btnrow>*{flex:1}.field{margin:8px 0}.field label{display:block;font-size:13px;font-weight:800;color:var(--mut);margin-bottom:5px}.field input,.field select,.field textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:13px;background:var(--card);color:var(--ink)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.full{grid-column:1/-1}.table{overflow:auto;border:1px solid var(--line);border-radius:15px}.table table{border-collapse:collapse;min-width:980px;width:100%}.table th:nth-child(2),.table td:nth-child(2){min-width:240px;width:240px;text-align:left;white-space:normal;word-break:break-word}th,td{border:1px solid var(--line);padding:8px;text-align:center;font-size:12px}th{background:#effff5}.dark th{background:#17241b}.paid{background:#baff70}.due{background:#ffd8df}.partial{background:#ffe9a8}.pending{background:#f4f5f7}.na{background:#e9edf1;color:#777}.total{background:#ffd2ef;font-weight:900}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.calhead{text-align:center;font-size:11px;font-weight:800;color:var(--mut)}.day{min-height:44px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink)}.day.taught{background:#c9ffd8;border:2px solid #08a94d}.day.cancel{background:#ffd8df}.day.resched{background:#dcecff}.day.holiday{background:#eee}.routine-grid{display:grid;grid-template-columns:1fr;gap:8px}.routine-row{border:1px solid var(--line);border-radius:15px;padding:10px;background:var(--card)}.routine-row .time{display:grid;grid-template-columns:1fr 1fr;gap:7px}.switch{display:flex;align-items:center;gap:8px}.list{border-top:1px solid var(--line)}.listitem{padding:11px 0;border-bottom:1px solid var(--line)}.drawerWrap,.modalWrap{display:none;position:fixed;inset:0;z-index:90;background:#0000;transition:background .2s}.drawerWrap.open,.modalWrap.open{background:#0006}.drawerWrap.open,.modalWrap.open{display:block}.drawer{position:absolute;right:0;top:10px;height:calc(100% - 20px);width:min(255px,72vw);background:var(--card);padding:18px;overflow:auto;border-radius:24px 0 0 24px;box-shadow:-12px 0 40px #0004;transform:translateX(105%);transition:transform .25s ease}
+.drawerWrap.open .drawer{transform:translateX(0)}.menuGrid{display:grid;grid-template-columns:1fr;gap:9px}.menuItem{width:100%}.menuItem{text-align:left;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink)}.modal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(590px,95%);max-height:94%;overflow:auto;background:var(--card);border-radius:24px;padding:19px}.bottom{position:fixed;z-index:50;bottom:0;left:50%;transform:translateX(-50%);width:min(640px,100%);display:grid;grid-template-columns:repeat(5,1fr);background:#fffffff5;backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 3px calc(6px + env(safe-area-inset-bottom))}.nav{border:0;background:transparent;color:var(--mut);font-size:11px;padding:5px}.nav b{display:block;font-size:20px}.nav.active{color:var(--p);font-weight:900}.login{min-height:100vh;display:grid;place-items:center;padding:20px}.loginBox{width:min(480px,100%);background:var(--card);border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:var(--shadow)}.avatar{width:74px;height:74px;border-radius:22px;object-fit:cover;border:2px solid var(--line);background:#eee}.profileHead{display:flex;gap:14px;align-items:center}.cvpro{background:#fff;color:#182230;padding:28px;border:1px solid #ccd5df;border-radius:4px;box-shadow:none}.cvpro h3{color:#1b4f72;letter-spacing:.12em}.europassTitle{border-left:8px solid #1b4f72;padding-left:12px}.cvpro h3{letter-spacing:.08em;font-size:13px;border-bottom:1px solid #ddd;padding-bottom:6px}.cvfooter{margin-top:28px;padding-top:12px;border-top:1px solid #ddd;font-size:12px;color:#667085}.receipt{background:#fff;color:#111;padding:24px;border:1px solid #d9e2ec;max-width:620px;margin:auto;border-radius:18px;box-shadow:0 8px 24px rgba(20,40,70,.08);overflow:hidden}.receipt .receiptHead{background:linear-gradient(135deg,#4b24ff,#087ff5);color:#fff;margin:-24px -24px 18px;padding:20px 22px}.receipt .receiptBrand{font-size:22px;font-weight:900;letter-spacing:.03em}.receipt .receiptMeta{font-size:12px;opacity:.92;line-height:1.5}.receipt .receiptBadge{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:99px;background:#ffffff22;border:1px solid #ffffff55;font-weight:800}.receipt .teacherMini{display:flex;gap:12px;align-items:center;padding:12px;border:1px solid #e4eaf0;background:#f7f9fc;border-radius:14px;margin:12px 0}.receipt .teacherMini img{width:52px;height:52px;object-fit:cover;border-radius:12px;border:1px solid #d9e2ec}.receipt .receiptTitle{font-size:19px;font-weight:900;margin:10px 0}.receipt table{min-width:0;width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid #dfe6ee;border-radius:12px}.receipt td,.receipt th{border:0;border-bottom:1px solid #e7ecf2;padding:10px;text-align:left}.receipt tr:last-child td,.receipt tr:last-child th{border-bottom:0}.receipt th{background:#f7f9fc;color:#52606d;font-size:12px}.receipt .totalBox{margin-top:14px;padding:13px 15px;background:#eefbf3;border:1px solid #bce8ca;border-radius:12px;font-weight:900;display:flex;justify-content:space-between}.receipt .receiptSign{display:flex;justify-content:space-between;gap:20px;margin-top:28px;text-align:center;align-items:flex-start}.receipt .receiptSign>div{flex:1}.receipt .teacherSignatureBlock{width:160px;min-width:160px;display:flex;flex-direction:column;align-items:center;text-align:center}.receipt .teacherSignatureBlock img{width:150px;height:58px;max-width:150px;max-height:58px;object-fit:contain;margin:0 auto 2px}.receipt .teacherTinyDetails{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:7px;padding-top:7px;border-top:1px solid #e1e6ec;width:150px;min-height:58px;font-size:11px;line-height:1.3;color:#4b5563;text-align:left;box-sizing:border-box}.receipt .teacherTinyText b{display:block;font-size:11px;color:#26323d;font-weight:800}.receipt .teacherTinyText span{display:block}.sig{font-family:cursive;font-size:25px}.searchSuggestions{display:none;position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:50;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.12);overflow:hidden}.searchSuggestions.open{display:block}.searchSuggestion{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 13px;border:0;border-bottom:1px solid #edf0f4;background:#fff;text-align:left;cursor:pointer}.searchSuggestion:last-child{border-bottom:0}.searchSuggestion:hover{background:#f7f9fc}.searchSuggestion b{display:block;color:#1f2937}.searchSuggestion small{display:block;color:#6b7280;margin-top:2px}.searchNoResult{padding:13px;color:#6b7280;font-size:13px}.searchHint{font-size:11px;color:#7b8794;margin-left:6px;white-space:nowrap}.receiptActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.receiptActions .btn{min-height:44px}@media(max-width:430px){.receiptActions{grid-template-columns:1fr 1fr}.receipt .receiptSign{gap:10px;font-size:12px}}.chart{height:220px;display:flex;align-items:end;gap:10px;padding:15px 8px;border:1px solid var(--line);border-radius:16px}.bar{flex:1;text-align:center;font-size:11px}.bar i{display:block;width:70%;margin:0 auto 5px;background:#08b957;border-radius:7px 7px 2px 2px}.toast{position:fixed;z-index:120;left:50%;bottom:100px;transform:translateX(-50%);background:#111;color:#fff;border-radius:99px;padding:10px 16px;opacity:0;transition:.2s}.toast.show{opacity:1}.small{font-size:12px}.dangerText{color:var(--r)}.paymentStudentGroup{border-top:4px solid var(--p)}.paymentStudentGroup .listitem{padding:12px 0}.paymentStudentGroup .listitem:last-child{border-bottom:0}.overviewCard{min-width:0}.overviewCard b{word-break:break-word}.overviewCard .badge{white-space:nowrap}@media(max-width:430px){.overviewCard{padding:13px}.overviewCard b{font-size:20px!important}}@media(max-width:430px){.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.hero h1{font-size:29px}.time{grid-template-columns:1fr!important}}@media print{.top,.bottom,.noPrint{display:none!important}.page{display:none!important}.page.active{display:block!important}.app{max-width:none}.receipt{border:0}}
+</style>
+<style id="v9-login-clean">#login{background:linear-gradient(135deg,#f6f8fc,#eef4ff)}#login .loginBox{box-shadow:0 16px 50px rgba(30,40,70,.12)}#login details{border-top:1px solid var(--line);padding-top:10px}#login summary{outline:none}</style>
+<style id="v8-receipt-print-guard">
+@media print {
+  body.receipt-print-mode #monthlyReport,
+  body.receipt-print-mode .monthly-report,
+  body.receipt-print-mode #monthly-report,
+  body.receipt-print-mode [data-section="monthly-report"],
+  body.receipt-print-mode .report-section { display:none !important; }
+}
+.cv-print-page{font-family:Arial,Helvetica,sans-serif;color:#182230;background:#fff}
+.cv-print-page .cvpro{max-width:850px;margin:auto;border:0;box-shadow:none;padding:38px}
+.cv-print-page h1{font-size:30px;margin:0 0 4px}.cv-print-page h3{font-size:12px;letter-spacing:.08em;color:#1b4f72;border-bottom:1px solid #d9e0e7;padding-bottom:7px;margin-top:24px}.cv-print-page .profileHead{border-bottom:3px solid #1b4f72;padding-bottom:18px}.cv-print-page .avatar{width:100px;height:100px;border-radius:4px}
+.audit-print-page{font-family:Arial,Helvetica,sans-serif;color:#182230;background:#fff}.audit-print-page .audit-sheet{max-width:1100px;margin:auto;padding:28px}.audit-print-page table{width:100%;border-collapse:collapse;font-size:11px}.audit-print-page th,.audit-print-page td{border:1px solid #cfd7df;padding:7px;text-align:center}.audit-print-page th{background:#edf3f7}.audit-total{font-weight:800;background:#f5f7f9}
+@media print{.cv-print-page .cvpro,.audit-print-page .audit-sheet{max-width:none}.cv-print-page .noPrint,.audit-print-page .noPrint{display:none!important}}
+
+</style>
+<style id="v11-backup-responsive">
+.backupActions{display:grid;grid-template-columns:1fr;gap:10px}.backupActions .btn{width:100%;min-height:48px;display:flex;align-items:center;justify-content:center;white-space:normal;text-align:center}.backupInfo{display:grid;grid-template-columns:1fr 1fr;gap:10px}.backupDrop{border:2px dashed var(--line);border-radius:16px;padding:14px;background:var(--bg)}
+@media(max-width:430px){.backupActions{grid-template-columns:1fr}.backupInfo{grid-template-columns:1fr}.backupDrop{padding:12px}.backupActions .btn{font-size:14px}}
+@media(min-width:431px){.backupActions{grid-template-columns:1fr 1fr}}
+</style>
+
+</head>
+<body>
+<div id="login" class="login"><div class="loginBox" style="max-width:390px;padding:20px"><div style="text-align:center;margin-bottom:14px"><div style="font-size:34px">📚</div><h2 style="margin:5px 0">My Tuition Manager</h2><div class="mut small">Secure local login</div></div><div class="btnrow"><button id="loginTab" class="btn green" onclick="showLogin()">Login</button><button id="createTab" class="btn" onclick="showCreate()">Create Account</button></div><div id="loginForm"><div class="field"><label>User ID</label><input id="uid" autocomplete="username" onkeydown="if(event.key==='Enter')doLogin()"></div><div class="field"><label>Password</label><input id="pwd" type="password" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()"></div><button class="btn green" style="width:100%" onclick="doLogin()">Login</button><details style="margin-top:12px"><summary class="mut small" style="cursor:pointer">Restore backup</summary><div class="field" style="margin-top:10px"><input id="loginFile" type="file" accept=".json"></div><button class="btn blue" style="width:100%" onclick="restoreLogin()">Restore</button></details></div><div id="createForm" class="hidden"><div class="field"><label>User ID</label><input id="cuid" autocomplete="username"></div><div class="field"><label>Email (for online Firebase login)</label><input id="cemail" type="email" autocomplete="email" placeholder="you@example.com"></div><div class="field"><label>Password</label><input id="cpwd" type="password" autocomplete="new-password"></div><div class="field"><label>Teacher name</label><input id="cname" value="Md Rasel"></div><button class="btn green" style="width:100%" onclick="doCreateAccount()">Create Account</button></div></div></div>
+<div id="app" class="app hidden"><div class="offline">⌁ Offline-first • localStorage • automatic local save</div><header class="top"><div class="row"><div><div class="brand">📚 PAYMENT RECEIPT</div><div class="mut" id="mini"></div></div><div><button class="menuBtn" onclick="toggleDrawer()">☰ Menu</button></div></div></header>
+<main>
+<section id="home" class="page active"><div class="hero" style="position:relative"><div style="position:absolute;right:12px;top:8px;text-align:center"><button class="btn" style="background:#ffffff22;color:#fff;border-color:#ffffff55;padding:6px 9px" onclick="page('profile')">👨‍🏫 My Profile</button><div class="analogClock" aria-label="Analog clock"><div class="clockFace">
+<span class="tick t12">12</span><span class="tick t3">3</span><span class="tick t6">6</span><span class="tick t9">9</span>
+<i id="hh" class="clockHand hourHand"></i><i id="mm" class="clockHand minuteHand"></i><i id="ss" class="clockHand secondHand"></i><i class="clockPin"></i>
+</div></div></div><div style="padding-right:120px"><small>WELCOME BACK</small><h1 id="welcome"></h1></div><div id="date"></div><div class="live"><span class="dot"></span> LIVE • <span id="nextClass">No upcoming class</span><div id="nextCountdown" class="small" style="margin-top:4px"></div></div><div class="btnrow"><button class="btn yellow" onclick="studentModal()">＋ Student</button><button class="btn green" onclick="quickPayment()">৳ Payment</button><button class="btn blue" onclick="page('routine')">⏰ Routine</button></div><div id="homePaymentQuick" class="live" style="margin-top:10px;display:none"></div></div><div class="search" style="margin-top:12px;position:relative">🔎 <input placeholder="Search students, payments, routines" autocomplete="off" oninput="searchAll(this.value)" onkeydown="if(event.key==='Enter'){event.preventDefault();submitHomeSearch()}" onfocus="if(this.value)searchAll(this.value)"><span class="searchHint">Enter ↵</span></div><div class="section"><div class="card"><div class="row"><h2 style="margin:0">⏰ Today & Next Day Routine</h2><span class="badge bblue">Live</span></div><div id="homeRoutine" class="list"></div></div><div class="card"><h3 style="margin-top:0">💳 Last Month / Previous Due</h3><div id="homeDue"></div></div><div class="card"><h3 style="margin-top:0">📈 Monthly Teaching Progress</h3><div id="homeProg"></div></div><div class="section"><h2>📊 Overview</h2><div id="homePlayCards" class="grid" style="margin-top:0"></div></div></div><div class="grid" style="margin-top:10px"><div class="metric"><span class="mut">Running Students</span><b id="mr">0</b></div><div class="metric"><span class="mut">Today's Classes</span><b id="mt">0/0</b></div><div class="metric"><span class="mut">Salary Received</span><b id="mrec">৳0</b></div><div class="metric"><span class="mut">Previous Due</span><b id="mlast">৳0</b></div></div><div class="grid" style="margin-top:10px"><div class="metric"><span class="mut">This Month</span><b id="mmonth">৳0</b></div><div class="metric"><span class="mut">Teaching Hours</span><b id="mhours">0h</b></div><div class="metric"><span class="mut">Attendance</span><b id="matt">0%</b></div><div class="metric"><span class="mut">Income Target</span><b id="mtarget">৳0</b></div></div><div class="section"><h2>🔔 Live Notifications</h2><div id="homeNotes"></div></div><div class="card" style="text-align:center;margin-top:18px"><b>© My Tuition Manager</b><br><span class="mut small">Made by Md Rasel • BSc Math • Dhaka Central University • Gmail: mdraselch04@gmail.com</span></div></section>
+<section id="students" class="page"><div class="section"><h2>👨‍🎓 Students</h2><div class="formgrid"><div class="field"><label>Status</label><select id="sf" onchange="renderStudents()"><option value="all">All Students</option><option value="running">Running</option><option value="ending">Ending Soon</option><option value="archived">Archived</option></select></div><div class="field"><label>Year</label><select id="yearSelect" onchange="renderAll()"></select></div><div class="field full"><input id="sq" placeholder="🔎 Search student..." oninput="renderStudents()"></div></div><button class="btn green" style="width:100%" onclick="studentModal()">＋ Add Student</button></div><div id="studentList"></div></section>
+<section id="routine" class="page"><div class="section"><h2>⏰ Weekly Routine</h2><p class="mut">Running students stay in routine until an ending month is added. Class reminders are calculated from the saved day/time.</p></div><div id="routineList"></div><div class="section"><h2>🏫 University / Exam Calendar</h2><button class="btn purple" style="width:100%" onclick="scheduleModal()">＋ Add Class / Exam</button><div id="conflicts"></div></div></section>
+<section id="finance" class="page"><div class="section"><h2>💰 Income Spreadsheet / Income Review</h2>
+<div class="menu-item" onclick="openIncomeAudit && openIncomeAudit('current')">📊 Income Audit (Year)</div>
+<div class="menu-item" onclick="openIncomeAudit && openIncomeAudit('all')">📥 Income Audit (All Years)</div>
+<div id="incomeYearTabs" class="btnrow" style="flex-wrap:wrap"></div><div class="row"><select id="fy" class="btn" onchange="renderFinance()"></select><button class="btn blue" onclick="page('payments')">💳 Payments</button></div><p class="mut small">Green = paid • Yellow = partial • Red = due • Grey = inactive.</p></div><div class="table"><table id="salary"></table></div><div class="section"><h2>📅 Previous Month Report</h2><div id="lastReport"></div></div></section>
+<section id="statistics" class="page"><div class="section"><h2>📊 Statistics</h2><div class="grid"><div class="metric"><span class="mut">Total Income</span><b id="stIncome">৳0</b></div><div class="metric"><span class="mut">Total Due</span><b id="stDue">৳0</b></div><div class="metric"><span class="mut">Teaching Days</span><b id="stDays">0</b></div><div class="metric"><span class="mut">Active Students</span><b id="stActive">0</b></div></div><div class="card"><h3>📈 Yearly Income</h3><div class="chart" id="chart"></div></div><div class="card"><h3>📚 Student Teaching Progress</h3><div id="teachingStats"></div></div></div></section>
+<section id="profile" class="page"><div class="section"><h2>👨‍🏫 Teacher CV</h2><div class="card" id="cv"></div><div class="btnrow"><button class="btn purple" onclick="editTeacherProfile()">✏️ Edit My Profile / CV</button><button class="btn blue" onclick="printCV()">🖨️ Print / Download CV</button></div></div></section>
+<section id="payments" class="page"><div class="section"><div class="row"><h2>💳 Payment Center</h2><button class="btn" onclick="page('studentProfile')">← Back</button></div><div id="payList"></div></div></section>
+<section id="reports" class="page"><div class="section"><h2>🧾 Reports</h2><div class="card"><div id="receiptBox"></div><div class="receiptActions noPrint"><button class="btn blue" onclick="downloadReceipt()">⬇️ Download Receipt</button><button class="btn" onclick="printReceiptOnly()">🖨️ Print / PDF</button><button class="btn green" onclick="shareReceipt()">↗ Share</button><button class="btn green" onclick="waReceipt()">💬 WhatsApp</button></div></div><div class="card monthly-report-card"><h3>📄 Monthly Report</h3><select id="reportMonth" onchange="renderMonthlyReport()"></select><div id="monthlyReport"></div></div></div></section>
+<section id="notifications" class="page"><div class="section"><h2>🔔 Notifications</h2><div id="allNotes"></div></div></section>
+<section id="search" class="page"><div class="section"><h2>🔎 Search Results</h2><div id="results"></div></div></section>
+<section id="backup" class="page"><div class="section"><h2>🛡️ Backup & Recovery</h2><div class="card"><h3>☁️ Online Cloud Backup</h3><p class="mut small">Firebase status: <b id="firebaseStatus">Checking…</b></p><p class="mut small">When Firebase is connected, your account data is automatically synced to your private Firestore document. LocalStorage + IndexedDB backup continues to work too.</p></div><div class="card"><div class="backupInfo"><div class="metric" style="margin:0"><span class="mut">Backup</span><b>Compact</b><small class="mut">No saved receipt files</small></div><div class="metric" style="margin:0"><span class="mut">Security</span><b>SHA-256</b><small class="mut">When supported</small></div></div><p class="mut small">Backup keeps student/payment history, routines, teaching records, schedules, tasks and teacher profile. Payment receipts are NOT stored as files; they are generated from payment data whenever needed. Password is never exported.</p><div class="backupActions"><button class="btn blue" onclick="downloadBackup()">💾 Download Full Backup</button><button class="btn green" onclick="document.getElementById('restoreFile').click()">📥 Choose Backup File</button></div></div><div class="card backupDrop"><label class="mut small">Selected backup</label><input id="restoreFile" type="file" accept=".json" style="width:100%;margin-top:7px"><button class="btn green" style="width:100%;margin-top:10px;min-height:48px" onclick="restoreSettings()">🔄 Restore Backup</button></div><div class="card"><h3>📦 App-only sharing</h3><p class="mut">Downloads only the HTML application. Current local backup data is not included.</p><button class="btn purple" style="width:100%;min-height:48px" onclick="downloadApp()">⬇️ Download App HTML</button></div><div class="card"><h3>🧪 Data integrity</h3><p class="mut">Backups contain a SHA-256 checksum when browser crypto is available. Invalid/corrupted backups are rejected.</p></div></div></section>
+<section id="settings" class="page"><div class="section"><h2>⚙️ Settings</h2><div class="card"><button class="btn" style="width:100%" onclick="toggleDark()">🌙 Toggle Light / Dark Mode</button></div><div class="card"><h3>👨‍🏫 Teacher Profile</h3><div class="field"><label>Name</label><input id="setName"></div><div class="field"><label>Email</label><input id="setEmail"></div><div class="field"><label>University</label><input id="setUni"></div><div class="field"><label>About</label><textarea id="setAbout" rows="3"></textarea></div><div class="formgrid"><div class="field"><label>Phone</label><input id="setPhone"></div><div class="field"><label>Address</label><input id="setAddress"></div><div class="field"><label>Education</label>
+<div class="form-group">
+<label>Work Experience</label>
+<textarea id="workExperience" name="workExperience" rows="5"
+placeholder="Organization / Institution — Role — Dates — Key responsibilities"></textarea>
+</div>
+<input id="setEducation"></div><div class="field"><label>Experience</label><input id="setExperience"></div><div class="field full"><label>Skills</label><input id="setSkills"></div><div class="field"><label>Designation</label><input id="setDesignation"></div><div class="field"><label>Institution</label><input id="setInstitution"></div><div class="field"><label>Date of Birth</label><input id="setDob" type="date"></div><div class="field"><label>Subjects</label><input id="setSubjects"></div><div class="field full"><label>Website / Facebook / LinkedIn</label><input id="setSocial"></div></div><div class="field"><label>Teacher Photo</label><input id="teacherPhoto" type="file" accept="image/*" onchange="loadImage(this,'photo')"></div><div class="field"><label>Teacher Signature</label><input id="teacherSign" type="file" accept="image/*" onchange="loadImage(this,'signature')"></div><button class="btn green" style="width:100%" onclick="saveProfileSettings()">✓ Save Profile</button></div><div class="card"><h3>🎯 Monthly Income Target</h3><div class="field"><label>Target Amount</label><input id="incomeTarget" type="number" min="0"></div><button class="btn green" style="width:100%" onclick="saveTarget()">✓ Save Target</button></div><div class="card"><h3>💾 Auto Save + Backup</h3><p class="mut small">All data is saved instantly to localStorage and also copied to IndexedDB automatic backup. A rolling backup is created every minute and when the page is hidden/closed.</p><select id="autoSave" onchange="saveSettings()"><option>ON</option><option>OFF</option></select><select id="autoInterval" onchange="saveSettings()"><option value="1">Every 1 minute</option><option value="5">Every 5 minutes</option><option value="15">Every 15 minutes</option></select></div><div class="card"><button class="btn blue" style="width:100%" onclick="downloadBackup()">💾 Backup</button><button class="btn purple" style="width:100%;margin-top:8px" onclick="downloadApp()">📦 Download App Only</button></div><div class="card"><b>👥 Current account</b><p id="accountInfo" class="mut"></p></div><div class="card"><p><b>Made by Md Rasel</b><br>BSc in Mathematics<br>Dhaka Central University<br>Gmail: mdraselch04@gmail.com</p></div><button class="btn red" style="width:100%" onclick="logout()">Logout</button></div></section>
+<section id="calendar" class="page"><div class="section"><h2>📅 Smart Calendar</h2><div class="row"><button class="btn" onclick="changeCal(-1)">‹</button><b id="calTitle"></b><button class="btn" onclick="changeCal(1)">›</button></div><div id="smartCalendar" class="calendar" style="margin-top:12px"></div><div id="calDetails"></div></div></section>
+<section id="tasks" class="page"><div class="section"><h2>📝 Notes & Tasks</h2><div class="card"><div class="field"><label>Task / Note</label><input id="taskText" placeholder="Call guardian / Check homework"></div><div class="formgrid"><div class="field"><label>Due date</label><input id="taskDate" type="date"></div><div class="field"><label>Priority</label><select id="taskPriority"><option>Normal</option><option>High</option><option>Urgent</option></select></div></div><button class="btn green" style="width:100%" onclick="addTask()">＋ Add Task</button></div><div id="taskList"></div></div></section>
+<section id="studentProfile" class="page"><div class="section"><div class="row"><h2>👤 Student Profile</h2><button class="btn" onclick="page('students')">← Back</button></div><div id="profileBox"></div></div></section>
+</main>
+<nav class="bottom"><button class="nav active" data-page="home" onclick="page('home')"><b>⌂</b>Home</button><button class="nav" data-page="students" onclick="page('students')"><b>👨‍🎓</b>Students</button><button class="nav" data-page="routine" onclick="page('routine')"><b>🗓️</b>Routine</button><button class="nav" data-page="finance" onclick="page('finance')"><b>৳</b>Finance</button><button class="nav" data-page="statistics" onclick="page('statistics')"><b>📊</b>Statistics</button></nav></div>
+<div id="drawerWrap" class="drawerWrap" onclick="if(event.target.id==='drawerWrap')toggleDrawer()"><aside class="drawer"><div class="row"><h2>Menu</h2><button class="btn" onclick="toggleDrawer()">✕</button></div><div class="menuGrid"><button class="menuItem" onclick="go('home')">🏠 Home</button><button class="menuItem" onclick="go('students')">👥 Students</button><button class="menuItem" onclick="go('routine')">⏰ Routine</button><button class="menuItem" onclick="go('payments')">💳 Payments</button><button class="menuItem" onclick="go('finance')">📈 Income Spreadsheet</button><button class="menuItem" onclick="go('finance')">🔎 Income Review</button><button class="menuItem" onclick="go('reports')">🧾 Reports</button><button class="menuItem" onclick="go('profile')">👨‍🏫 Teacher CV</button><button class="menuItem" onclick="go('statistics')">📊 Statistics</button><button class="menuItem" onclick="go('calendar')">📅 Calendar</button><button class="menuItem" onclick="go('tasks')">📝 Notes & Tasks</button><button class="menuItem" onclick="go('notifications')">🔔 Notifications</button><button class="menuItem" onclick="go('backup')">🛡️ Backup</button><button class="menuItem" onclick="go('settings')">⚙️ Settings</button></div></aside></div>
+<div id="modalWrap" class="modalWrap" onclick="if(event.target.id==='modalWrap')closeModal()"><div class="modal" id="modal"></div></div><div id="toast" class="toast"></div>
+<style>
+.search{position:relative;transition:border-color .18s,box-shadow .18s}.search:focus-within{border-color:var(--p2);box-shadow:0 0 0 3px #087ff51a}.search input{min-height:24px}.search input::placeholder{color:var(--mut)}
+
+<style id="v12-profile-progress-calendar">
+#studentProfile .calendar{gap:5px}
+#studentProfile .day{min-width:0;min-height:38px;padding:4px;font-size:12px}
+#homePaymentQuick{min-height:68px}
+@media(max-width:430px){
+  #studentProfile .grid{grid-template-columns:1fr}
+  #studentProfile .calendar{gap:4px}
+  #studentProfile .day{min-height:36px;font-size:11px}
+}
+</style>
+
+</style>
+<script src="https://www.gstatic.com/firebasejs/12.17.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.17.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore-compat.js"></script>
+<script>
+/* Firebase Cloud Login + Backup configuration.
+   Replace the values below with the Firebase Web App config from your Firebase Console. */
+window.MTM_FIREBASE_CONFIG={
+  apiKey:"AIzaSyDaVo_rI57TKWT0qRNInk9yeXolFjLAD5c",
+  authDomain:"my-tution-manager.firebaseapp.com",
+  projectId:"my-tution-manager",
+  storageBucket:"my-tution-manager.firebasestorage.app",
+  messagingSenderId:"150342460695",
+  appId:"1:150342460695:web:14dccba9f68cc7b94a8352",
+  measurementId:"G-FGWH5F99PE"
+};
+window.MTM_FIREBASE_ENABLED=true;
+window.MTM_FIREBASE_UID='';
+try{
+  const c=window.MTM_FIREBASE_CONFIG;
+  const ready=c&&c.apiKey&&c.projectId&&c.appId&&!String(c.apiKey).startsWith('PASTE_')&&!String(c.projectId).startsWith('PASTE_')&&!String(c.appId).startsWith('PASTE_');
+  if(ready){
+    firebase.initializeApp(c);
+    window.MTM_FIREBASE_AUTH=firebase.auth();
+    window.MTM_FIREBASE_DB=firebase.firestore();
+    window.MTM_FIREBASE_ENABLED=true;
+    window.MTM_FIREBASE_AUTH.setPersistence(firebase.auth.Auth.Persistence.LOCAL).catch(()=>{});
+  }
+}catch(e){window.MTM_FIREBASE_ENABLED=false;}
+</script>
+<script>
+const STORE='MTM_V3_ACCOUNTS',ACTIVE='MTM_V3_ACTIVE';
+let accounts={};
+try{const raw=localStorage.getItem(STORE);accounts=raw?JSON.parse(raw):{};if(!accounts||typeof accounts!=='object'||Array.isArray(accounts))accounts={};}catch(e){accounts={};localStorage.removeItem(STORE);}
+let activeUser=localStorage.getItem(ACTIVE)||'',S=null,activeStudent='',lastReceipt=null;
+const DAYS=['Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday','Friday'];
+function uid(){return 's_'+Date.now()+'_'+Math.random().toString(36).slice(2,7)}
+function esc(v){return String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function money(n){return '৳'+Number(n||0).toLocaleString('en-BD')}
+function toast(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1800)}
+function saveAccounts(){if(S&&activeUser)accounts[activeUser]=S;try{localStorage.setItem(STORE,JSON.stringify(accounts))}catch(e){toast('Storage error: data could not be saved')}}
+let mtmCloudTimer=null,mtmCloudInFlight=false,mtmCloudQueued=false;
+function save(){if(!S||!activeUser)return;accounts[activeUser]=S;saveAccounts();if(window.mtmSaveLargeState)window.mtmSaveLargeState();mtmQueueCloudSave('save')}
+function mtmCloudSafeState(){try{let x=JSON.parse(JSON.stringify(S||{}));if(x.user)delete x.user.password;return x}catch(e){return null}}
+async function mtmCloudSave(reason){if(!window.MTM_FIREBASE_ENABLED||!window.MTM_FIREBASE_AUTH?.currentUser||!window.MTM_FIREBASE_DB||!S)return false;try{let uid=window.MTM_FIREBASE_AUTH.currentUser.uid;let data=mtmCloudSafeState();await window.MTM_FIREBASE_DB.collection('users').doc(uid).set({state:data,userId:S.user?.id||activeUser,email:S.user?.email||window.MTM_FIREBASE_AUTH.currentUser.email||'',updatedAt:firebase.firestore.FieldValue.serverTimestamp(),reason:reason||'auto'},{merge:true});return true}catch(e){console.warn('Firebase cloud save failed',e);return false}}
+function mtmQueueCloudSave(reason){if(!window.MTM_FIREBASE_ENABLED)return;mtmCloudQueued=true;clearTimeout(mtmCloudTimer);mtmCloudTimer=setTimeout(async()=>{if(mtmCloudInFlight)return;mtmCloudInFlight=true;mtmCloudQueued=false;try{await mtmCloudSave(reason||'save')}finally{mtmCloudInFlight=false;if(mtmCloudQueued)mtmQueueCloudSave('queued-save')}},500)}
+window.mtmCloudSave=mtmCloudSave;
+async function mtmCloudLoad(uid){if(!window.MTM_FIREBASE_ENABLED||!window.MTM_FIREBASE_DB||!uid)return null;try{let d=await window.MTM_FIREBASE_DB.collection('users').doc(uid).get();return d.exists&&d.data()?.state?d.data().state:null}catch(e){console.warn('Firebase cloud load failed',e);return null}}
+function mtmSetFirebaseStatus(text){let el=document.getElementById('firebaseStatus');if(el)el.textContent=text;}
+
+function defaultState(name,id){return {version:5,user:{id,name,email:'mdraselch04@gmail.com',university:'Dhaka Central University',about:'Private mathematics tutor and tuition-management professional.',photo:'',signature:'',phone:'',address:'',education:'BSc in Mathematics',experience:'',skills:'Mathematics • Teaching • Student Progress'},students:[],events:[],tasks:[],dark:false,settings:{auto:'ON',interval:1,incomeTarget:50000}}}
+const $=id=>document.getElementById(id);
+function showLogin(){
+  $('login').classList.remove('hidden'); $('app').classList.add('hidden');
+  $('loginForm').classList.remove('hidden'); $('createForm').classList.add('hidden');
+  $('uid').value=''; $('pwd').value='';
+  $('loginTab')?.classList.add('green'); $('createTab')?.classList.remove('green');
+  setTimeout(()=>$('uid')?.focus(),0);
+}
+function showCreate(){
+  $('loginForm').classList.add('hidden'); $('createForm').classList.remove('hidden');
+  $('loginTab')?.classList.remove('green'); $('createTab')?.classList.add('green');
+  setTimeout(()=>$('cuid')?.focus(),0);
+}
+async function doCreateAccount(){
+  let id=$('cuid').value.trim(),p=$('cpwd').value,n=$('cname').value.trim()||'Teacher',email=($('cemail')?.value||'').trim();
+  if(!id||!p)return toast('User ID and password required');
+  if(id.length<3)return toast('User ID must be at least 3 characters');
+  if(p.length<4)return toast('Password must be at least 4 characters');
+  if(window.MTM_FIREBASE_ENABLED){
+    if(!email||!email.includes('@'))return toast('Firebase mode: valid email required');
+    try{
+      if(accounts[id])return toast('User ID already exists locally');
+      const cred=await window.MTM_FIREBASE_AUTH.createUserWithEmailAndPassword(email,p);
+      S=defaultState(n,id);S.user.email=email;S.user.firebaseUid=cred.user.uid;delete S.user.password;
+      accounts[id]=S;activeUser=id;
+      localStorage.setItem(ACTIVE,id);save();
+      await mtmCloudSave('account-created');
+      showApp();toast('Online account created ✓');
+    }catch(e){toast('Firebase signup failed: '+(e.code||'check email/password'));}
+    return;
+  }
+  if(accounts[id])return toast('User ID already exists');
+  S=defaultState(n,id);S.user.password=p;accounts[id]=S;activeUser=id;
+  try{localStorage.setItem(ACTIVE,id)}catch(e){}
+  save();showApp();toast('Account created ✓');
+}
+async function doLogin(){
+  const id=$('uid').value.trim(),p=$('pwd').value;
+  if(!id||!p)return toast('Enter login details');
+  if(window.MTM_FIREBASE_ENABLED){
+    let email=id;
+    if(!email.includes('@')&&accounts[id]?.user?.email)email=accounts[id].user.email;
+    if(!email.includes('@'))return toast('Firebase mode: use your email address');
+    try{
+      const cred=await window.MTM_FIREBASE_AUTH.signInWithEmailAndPassword(email,p);
+      const cloud=await mtmCloudLoad(cred.user.uid);
+      if(cloud&&cloud.user){
+        S=cloud;S.user=S.user||{};S.user.email=cred.user.email||S.user.email;S.user.firebaseUid=cred.user.uid;delete S.user.password;activeUser=S.user.id||email;
+      }else{
+        const localKey=Object.keys(accounts).find(k=>accounts[k]?.user?.email===email);
+        S=localKey?accounts[localKey]:defaultState(email.split('@')[0],email.split('@')[0]);
+        S.user.email=email;S.user.firebaseUid=cred.user.uid;delete S.user.password;activeUser=S.user.id||email.split('@')[0];
+      }
+      accounts[activeUser]=S;localStorage.setItem(ACTIVE,activeUser);save();
+      await mtmCloudSave('login');showApp();toast('Online login successful ✓');
+    }catch(e){toast('Firebase login failed: '+(e.code||'check email/password'));}
+    return;
+  }
+  const account=accounts[id];
+  if(!account||!account.user)return toast('Invalid User ID or password');
+  const saved=String(account.user.password||'');
+  if(!saved)return toast('This account needs backup recovery or a new account');
+  if(saved!==p)return toast('Invalid User ID or password');
+  activeUser=id;S=account;S.user=S.user||{};S.user.id=id;
+  S.students=(S.students||[]).map(normalizeStudent);
+  S.settings=S.settings||{auto:'ON',interval:1,incomeTarget:50000};S.tasks=S.tasks||[];
+  try{localStorage.setItem(ACTIVE,id)}catch(e){}
+  showApp();toast('Login successful ✓');
+}
+async function logout(){
+  try{await mtmCloudSave('logout')}catch(e){}
+  try{save()}catch(e){}
+  try{if(window.MTM_FIREBASE_ENABLED&&window.MTM_FIREBASE_AUTH)await window.MTM_FIREBASE_AUTH.signOut()}catch(e){}
+  activeUser=''; S=null; lastReceipt=null;
+  try{localStorage.removeItem(ACTIVE)}catch(e){}
+  document.querySelectorAll('.drawerWrap.open,.modalWrap.open').forEach(x=>x.classList.remove('open'));
+  showLogin(); toast('Logged out ✓');
+}
+function showApp(){
+  $('login').classList.add('hidden'); $('app').classList.remove('hidden');
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  $('home')?.classList.add('active');
+  document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.page==='home'));
+  renderAll();
+}
+function toggleDrawer(){drawerWrap.classList.toggle('open')}function go(id){toggleDrawer();page(id)}function page(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id)?.classList.add('active');document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.page===id));if(id==='studentProfile')renderProfile();if(id==='payments')renderPayments();if(id==='reports'){renderReceipt();renderMonthlyReport()}window.scrollTo(0,0)}
+function key(y,m){return y+'-'+String(m).padStart(2,'0')}function monthName(k){let [y,m]=k.split('-');return new Date(+y,+m-1,1).toLocaleString('en',{month:'long',year:'numeric'})}
+function activeMonths(s,y){y=Number(y||new Date().getFullYear());let start=String(s.start||y+'-01').slice(0,7),end=String(s.end||'9999-12').slice(0,7);let a=[];for(let yy=+start.slice(0,4);yy<=Math.min(y,+end.slice(0,4));yy++){for(let m=1;m<=12;m++){let k=key(yy,m);if(yy===+start.slice(0,4)&&m<+start.slice(5,7))continue;if(yy===+end.slice(0,4)&&m>+end.slice(5,7))continue;if(yy===y)a.push(k)}}return a}
+function monthSalary(s,k){let p=s.pay?.[k]||{};return Number(p.salary??s.salary??0)}
+function monthStatus(s,k){let [yy,mm]=k.split('-').map(Number),now=new Date(),curY=now.getFullYear(),curM=now.getMonth()+1,rec=Number(s.pay?.[k]?.received||0),salary=monthSalary(s,k);if(k<key(curY,curM)&&rec<=0)return 'due';if(k>=key(curY,curM)&&rec<=0)return 'pending';return rec>=salary?'paid':'partial'}
+function isNA(s,k){return s.pay?.[k]?.na===true}
+function running(s){if(s.archived)return false;if(!s.end)return true;let nowK=key(new Date().getFullYear(),new Date().getMonth()+1);return nowK<=String(s.end).slice(0,7)}
+function isEnding(s){if(!s.end)return false;let e=new Date(s.end+'-01'),now=new Date(); now.setDate(1); now.setHours(0,0,0,0);let d=(e-now)/(86400000);return d>=0&&d<62}
+function normalizeStudent(s){s.routine=s.routine||[];s.taught=s.taught||[];s.pay=s.pay||{};s.history=s.history||{};s.attendance=s.attendance||{};s.marks=s.marks||[];s.notes=s.notes||'';s.paymentHistory=s.paymentHistory||{};Object.keys(s.pay||{}).forEach(k=>{s.pay[k]=s.pay[k]||{received:0};});s.guardian=s.guardian||'';s.guardianPhone=s.guardianPhone||'';s.className=s.className||'';s.roll=s.roll||'';s.address=s.address||'';s.archived=!!s.archived;return s}
+function renderAll(){S.students=S.students.map(normalizeStudent);S.tasks=S.tasks||[];S.settings=S.settings||{auto:'ON',interval:1,incomeTarget:50000};S.user={...{name:'Teacher',email:'',university:'',about:'',phone:'',address:'',education:'',experience:'',skills:'',designation:'',institution:'',dob:'',subjects:'',social:'',photo:'',signature:'',certifications:'',achievements:'',languages:'',teachingMethods:'',references:'',availability:'',portfolio:''},...S.user};document.body.classList.toggle('dark',!!S.dark);mini.textContent=S.user.name;welcome.textContent=S.user.name+' 👋';date.textContent=new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});fillYears();renderHome();renderStudents();renderRoutine();renderFinance();renderStats();renderCV();renderNotes();renderSettings();renderReceipt();renderMonthlyReport();renderTasks();renderCalendar();updateCountdown()}
+function fillYears(){let y=new Date().getFullYear();yearSelect.innerHTML='';fy.innerHTML='';for(let i=y-4;i<=y+4;i++){yearSelect.innerHTML+='<option>'+i+'</option>';fy.innerHTML+='<option>'+i+'</option>'}yearSelect.value=y;fy.value=y;reportMonth.innerHTML='';for(let m=1;m<=12;m++)reportMonth.innerHTML+='<option value="'+key(y,m)+'">'+monthName(key(y,m))+'</option>'}
+function upcoming(){let now=new Date(),day=DAYS[(now.getDay()+6)%7],mins=now.getHours()*60+now.getMinutes(),arr=[];S.students.filter(running).forEach(s=>s.routine.filter(r=>r.day===day&&r.enabled).forEach(r=>{let [h,m]=r.start.split(':').map(Number);let x=h*60+m;if(x>=mins)arr.push({s,r,x})}));arr.sort((a,b)=>a.x-b.x);return arr[0]}
+
+let homePaymentTickerItems=[];
+let homePaymentTickerIndex=0;
+let homePaymentTickerTimer=null;
+
+function buildPreviousPaymentNotifications(){
+  const now=new Date();
+  const curK=key(now.getFullYear(),now.getMonth()+1);
+  const items=[];
+  S.students.filter(s=>!s.archived).forEach(s=>{
+    const keys=new Set(Object.keys(s.pay||{}));
+    const startK=String(s.start||'').slice(0,7);
+    if(startK){
+      let d=new Date(startK+'-01T00:00:00');
+      const stop=new Date(now.getFullYear(),now.getMonth()-1,1);
+      while(d<=stop){
+        keys.add(key(d.getFullYear(),d.getMonth()+1));
+        d.setMonth(d.getMonth()+1);
+      }
+    }
+    [...keys].filter(k=>k<curK && !isNA(s,k) && (!s.end || k<=String(s.end).slice(0,7))).sort().reverse().forEach(k=>{
+      const salary=monthSalary(s,k);
+      const rec=Number(s.pay?.[k]?.received||0);
+      if(salary<=0)return;
+      const due=Math.max(0,salary-rec);
+      const paid=rec>=salary;
+      items.push({
+        id:s.id+'_'+k,
+        name:s.name,
+        month:k,
+        status:paid?'done':'due',
+        received:rec,
+        due
+      });
+    });
+  });
+  return items.sort((a,b)=>b.month.localeCompare(a.month)||a.name.localeCompare(b.name));
+}
+
+function renderHomePaymentTicker(){
+  const box=document.getElementById('homePaymentQuick');
+  if(!box)return;
+  homePaymentTickerItems=buildPreviousPaymentNotifications();
+  if(!homePaymentTickerItems.length){
+    box.style.display='block';
+    box.innerHTML='<b>🔔 Payment Notifications</b><div class="listitem"><span class="badge bgreen">✓ All previous-month payments are clear</span></div>';
+    if(homePaymentTickerTimer){clearInterval(homePaymentTickerTimer);homePaymentTickerTimer=null;}
+    return;
+  }
+  homePaymentTickerIndex=0;
+  box.style.display='block';
+  showNextHomePaymentNotification();
+  if(homePaymentTickerTimer)clearInterval(homePaymentTickerTimer);
+  homePaymentTickerTimer=setInterval(showNextHomePaymentNotification,3500);
+}
+
+function showNextHomePaymentNotification(){
+  const box=document.getElementById('homePaymentQuick');
+  if(!box||!homePaymentTickerItems.length)return;
+  const x=homePaymentTickerItems[homePaymentTickerIndex%homePaymentTickerItems.length];
+  homePaymentTickerIndex++;
+  const status=x.status==='done';
+  box.innerHTML=
+    '<div class="row"><b>🔔 Payment Notification</b><span class="badge '+(status?'bgreen':'bred')+'">'+(status?'✓ DONE':'⚠ DUE')+'</span></div>'+
+    '<div class="listitem" style="padding-bottom:0"><div class="row">'+
+    '<span><b>'+esc(x.name)+'</b><br><small>'+monthName(x.month)+' • '+(status?'Payment completed':'Payment due')+'</small></span>'+
+    '<span style="text-align:right"><b>'+money(status?x.received:x.due)+'</b><br><small>'+(status?'Received':'Remaining')+'</small></span>'+
+    '</div></div>';
+}
+function renderHome(){
+  renderHomePaymentTicker();
+
+  let run=S.students.filter(running),today=DAYS[(new Date().getDay()+6)%7],all=0,td=0;
+  run.forEach(s=>{
+    all+=s.routine.filter(r=>r.enabled).length;
+    if(s.routine.some(r=>r.enabled&&r.day===today))td++;
+  });
+
+  let now=new Date(),monthK=key(now.getFullYear(),now.getMonth()+1),
+      prevDate=new Date(now.getFullYear(),now.getMonth()-1,1),
+      prevK=key(prevDate.getFullYear(),prevDate.getMonth()+1);
+
+  let monthIncome=run.reduce((a,s)=>a+Number(s.pay[monthK]?.received||0),0),
+      prevDue=run.reduce((a,s)=>a+Math.max(0,s.salary-(s.pay[prevK]?.received||0)),0);
+
+  mr.textContent=run.length;mt.textContent=td+'/'+all;mrec.textContent=money(monthIncome);
+  mlast.textContent=money(prevDue);if(mmonth)mmonth.textContent=money(monthIncome);
+
+  let hours=run.reduce((a,s)=>a+s.routine.filter(r=>r.enabled)
+    .reduce((x,r)=>x+Math.max(0,(toMin(r.end)-toMin(r.start))/60),0),0);
+  if(mhours)mhours.textContent=hours.toFixed(1)+'h/week';
+
+  let total=0,present=0;
+  run.forEach(s=>Object.values(s.attendance||{}).forEach(v=>{total++;if(v==='present')present++}));
+  if(matt)matt.textContent=total?Math.round(present/total*100)+'%':'0%';
+  if(mtarget)mtarget.textContent=money(S.settings.incomeTarget||0);
+
+  let up=upcoming();
+  nextClass.textContent=up?up.s.name+' • '+formatTime(up.r.start):'No upcoming class';
+
+  let dueRows=run.flatMap(s=>{
+    let arr=[],rec=Number(s.pay[prevK]?.received||0);
+    if(rec<monthSalary(s,prevK)&&!isNA(s,prevK))
+      arr.push('<div class="listitem"><b>'+esc(s.name)+'</b> — '+monthName(prevK)+' — Due '+money(monthSalary(s,prevK)-rec)+'</div>');
+    return arr;
+  });
+  homeDue.innerHTML=dueRows.join('')||'<div class="card"><span class="badge bgreen">✓ No previous-month due</span></div>';
+
+  homeProg.innerHTML=run.slice(0,8).map(s=>{
+    let n=s.taught.filter(x=>x.startsWith(monthK)).length;
+    return '<div class="card"><div class="row"><b>🎓 '+esc(s.name)+'</b><span>'+n+' days</span></div><div class="progress"><i style="width:'+Math.min(100,n/18*100)+'%"></i></div></div>'
+  }).join('')||'<div class="card">No running students.</div>';
+
+  /* Home Overview Cards — read-only calculations; existing data structures/features remain unchanged. */
+  let allStudents=S.students.filter(s=>!s.archived);
+  let yearIncome={};
+  allStudents.forEach(s=>{
+    Object.entries(s.pay||{}).forEach(([k,p])=>{
+      if(p?.na)return;
+      let rec=Number(p?.received||0),y=String(k).slice(0,4);
+      if(/^20\d{2}$/.test(y))yearIncome[y]=(yearIncome[y]||0)+rec;
+    });
+  });
+
+  let years=Object.keys(yearIncome).map(Number).sort((a,b)=>b-a);
+  let currentYear=now.getFullYear();
+  if(!yearIncome[currentYear])yearIncome[currentYear]=0;
+  if(!years.includes(currentYear))years.unshift(currentYear);
+  years.sort((a,b)=>b-a);
+
+  let allYearTotal=Object.values(yearIncome).reduce((a,v)=>a+Number(v||0),0);
+
+  let monthlyIncome={};
+  allStudents.forEach(s=>{
+    Object.entries(s.pay||{}).forEach(([k,p])=>{
+      if(p?.na)return;
+      monthlyIncome[k]=(monthlyIncome[k]||0)+Number(p?.received||0);
+    });
+  });
+
+  let lastMonthTotal=Number(monthlyIncome[prevK]||0);
+  let highestMonthEntry=Object.entries(monthlyIncome)
+    .filter(([,v])=>Number(v)>0)
+    .sort((a,b)=>Number(b[1])-Number(a[1]))[0];
+  let highestYearEntry=Object.entries(yearIncome)
+    .filter(([,v])=>Number(v)>0)
+    .sort((a,b)=>Number(b[1])-Number(a[1]))[0];
+
+  /* Student totals come from student profiles, not taught-day counts. */
+  let runningCount=allStudents.filter(s=>running(s)).length;
+  let endingCount=allStudents.filter(s=>!s.archived&&isEnding(s)).length;
+  let totalTaughtStudents=allStudents.filter(s=>!s.archived).length;
+
+  let cards=[];
+
+  /* One income card for every recorded year, e.g. 2024, 2025, 2026. */
+  years.forEach(y=>{
+    cards.push(['📅','Year '+y+' Total Income',money(Number(yearIncome[y]||0)),'Income received in '+y,'year']);
+  });
+
+  cards.push(
+    ['💰','All Year Total Income',money(allYearTotal),'All recorded years','total'],
+    ['🗓️','Last Month Total Income',money(lastMonthTotal),monthName(prevK),'month'],
+    ['🏆','Highest Income Month',highestMonthEntry?money(Number(highestMonthEntry[1])):'৳0',highestMonthEntry?monthName(highestMonthEntry[0]):'No income recorded','high'],
+    ['🥇','Highest Income Year',highestYearEntry?money(Number(highestYearEntry[1])):'৳0',highestYearEntry?'Year '+highestYearEntry[0]:'No income recorded','high'],
+    ['📚','Total Taught Student Number',String(totalTaughtStudents),'Running '+runningCount+' • Ending '+endingCount,'students'],
+    ['👨‍🎓','Running Student Number',String(runningCount),'Currently running student profiles','running'],
+    ['⏳','Ending Student Number',String(endingCount),'Ending-soon student profiles','ending']
+  );
+
+  let play=document.getElementById('homePlayCards');
+  if(play){
+    play.innerHTML=cards.map(c=>'<div class="card overviewCard" style="cursor:default;margin:0"><div class="row"><div class="overviewIcon">'+c[0]+'</div><span class="badge bblue">OVERVIEW</span></div><div style="margin-top:9px"><div class="overviewTitle small">'+esc(c[1])+'</div><div class="overviewValue" style="margin-top:3px">'+esc(c[2])+'</div><div class="overviewSub small" style="margin-top:4px">'+esc(c[3])+'</div></div></div>').join('');
+  }
+
+  renderHomeRoutine();
+  renderNotes();
+}
+function renderHomeRoutine(){let n=new Date(),today=DAYS[(n.getDay()+6)%7],t=new Date(n);t.setDate(n.getDate()+1);let tomorrow=DAYS[(t.getDay()+6)%7],rows=[];[today,tomorrow].forEach((d,i)=>S.students.filter(running).forEach(st=>st.routine.filter(r=>r.enabled&&r.day===d).forEach(r=>rows.push(`<div class="listitem"><b>${esc(i?'Tomorrow':'Today')} • ${esc(st.name)}</b><br>⏰ ${formatTime(r.start)} – ${formatTime(r.end)}<div class="btnrow"><button class="btn blue" onclick="openProfile('${st.id}')">Student</button><button class="btn orange" onclick="rescheduleStudent('${st.id}','${d}')">Change</button><button class="btn green" onclick="waRoutine('${st.id}','${d}')">WhatsApp</button></div></div>`))));homeRoutine.innerHTML=rows.join('')||'<div class="listitem mut">No routine found.</div>'}
+function renderLastMonthQuick(){let n=new Date();n.setMonth(n.getMonth()-1);let k=key(n.getFullYear(),n.getMonth()+1),a=S.students.filter(s=>!s.archived&&String(s.start).slice(0,7)<=k&&(!s.end||String(s.end).slice(0,7)>=k));lastMonthQuick.innerHTML=a.map(s=>`<div class="listitem"><div class="row"><b>🎓 ${esc(s.name)}</b><span>${money(s.salary)}</span></div><div class="btnrow"><button class="btn blue" onclick="openProfile('${s.id}')">Profile</button><button class="btn green" onclick="quickPay('${s.id}','${k}')">৳ Payment</button><button class="btn purple" onclick="showPaymentReceipt('${s.id}','${k}')">🧾 Receipt</button><button class="btn" onclick="waStu('${s.id}')">💬 WhatsApp</button></div></div>`).join('')||'<div class="listitem mut">No students for last month.</div>'}
+function waRoutine(id,day){let s=S.students.find(x=>x.id===id);if(!s)return;let r=s.routine.find(x=>x.enabled&&x.day===day);if(!r)return;let msg='Routine update for '+s.name+': '+day+' '+formatTime(r.start)+' - '+formatTime(r.end)+'. Please confirm if this time works.';if(s.phone||s.guardianPhone){let n=(s.phone||s.guardianPhone).replace(/[^0-9]/g,'');window.open('https://wa.me/'+(n.startsWith('880')?n:'880'+n.replace(/^0/,''))+'?text='+encodeURIComponent(msg),'_blank')}else if(navigator.clipboard){navigator.clipboard.writeText(msg);toast('Routine message copied — no number saved')}}
+function formatTime(t){let [h,m]=t.split(':').map(Number),ap=h>=12?'PM':'AM',hh=h%12||12;return hh+':'+String(m).padStart(2,'0')+' '+ap}
+function openProfile(id){activeStudent=id;window.profileYear=new Date().getFullYear();page('studentProfile');renderProfile()}
+function renderStudents(){let f=sf.value,q=(sq.value||'').toLowerCase();let a=S.students.filter(s=>{if(f==='running')return running(s);if(f==='ending')return !s.archived&&isEnding(s);if(f==='archived')return s.archived;return true}).filter(s=>(s.name+' '+s.school+' '+s.subject).toLowerCase().includes(q));a.sort((x,y)=>{let rank=s=>s.archived?2:(s.end?1:0);let r=rank(x)-rank(y);if(r)return r;return (x.end||'9999-99').localeCompare(y.end||'9999-99')||x.name.localeCompare(y.name)});studentList.innerHTML=a.map(s=>{let curK=key(new Date().getFullYear(),new Date().getMonth()+1),taught=s.taught.filter(x=>x.startsWith(curK)).length,received=Object.values(s.pay).reduce((a,v)=>a+Number(v?.received||0),0),cls=s.routine.filter(r=>r.enabled).length;return '<div class="card student '+(s.archived?'arch':s.end?'end':'')+'"><div class="row"><h3>🎓 '+esc(s.name)+'</h3><span class="badge '+(s.archived?'bblue':s.end?'byellow':'bgreen')+'">'+(s.archived?'Archived':s.end?'Ending':'Running')+'</span></div><div class="meta">🏫 '+esc(s.school)+'<br>📚 '+esc(s.subject)+'<br>💰 '+money(s.salary)+'/month<br>📅 '+esc(s.start)+' → '+(s.end||'Ongoing')+'<br>⏰ '+cls+' weekly routine slot(s)<br>📚 Current month taught: '+taught+' day(s) • 💵 Total received: '+money(received)+'</div><div class="progress"><i style="width:'+Math.min(100,taught/18*100)+'%"></i></div><div class="btnrow"><button class="btn blue" onclick="openProfile(\''+s.id+'\')">👤 Profile</button><button class="btn green" onclick="markToday(\''+s.id+'\')">📚 Mark Today</button></div><div class="btnrow"><button class="btn yellow" onclick="studentModal(\''+s.id+'\')">✏️ Edit</button><button class="btn orange" onclick="archiveStudent(\''+s.id+'\')">'+(s.archived?'↩️ Restore':'🗃️ Archive')+'</button></div></div>'}).join('')||'<div class="card">No students found.</div>'}
+function routineEditor(routine=[]){let map={};(routine||[]).forEach(r=>{map[r.day]={enabled:!!r.enabled,start:r.start||'18:00',end:r.end||'19:00'}});return DAYS.map(d=>{let r=map[d]||{enabled:false,start:'18:00',end:'19:00'};return '<div class="routine-row"><label class="switch"><input type="checkbox" class="rday" data-day="'+d+'" '+(r.enabled?'checked':'')+'> <b>'+d+'</b></label><div class="time"><input type="time" class="rstart" data-day="'+d+'" value="'+esc(r.start)+'"><input type="time" class="rend" data-day="'+d+'" value="'+esc(r.end)+'"></div><button type="button" class="btn green" style="margin-top:7px;width:100%" onclick="markRoutineToday(\''+d+'\')">📚 Mark taught today</button></div>'}).join('')}
+function collectRoutine(){return [...document.querySelectorAll('.rday')].map(c=>{let d=c.dataset.day,start=document.querySelector('.rstart[data-day="'+d+'"]').value||'18:00',end=document.querySelector('.rend[data-day="'+d+'"]').value||'19:00';return {day:d,enabled:c.checked,start,end}}).filter(r=>r.enabled)}
+function markRoutineToday(day){let s=S.students.find(x=>x.id===activeStudent);if(!s)return toast('Open a student profile first');let today=DAYS[(new Date().getDay()+6)%7];if(day!==today)return toast('Today is '+today+', not '+day);markToday(s.id)}
+function studentModal(id=''){let s=normalizeStudent(S.students.find(x=>x.id===id)||{id:'',name:'',school:'',subject:'',salary:8000,start:'2026-08',end:'',phone:'',routine:[],taught:[],pay:{},history:{},archived:false});modal.innerHTML='<div class="row"><h2>'+ (id?'✏️ Edit Student':'＋ Add Student')+'</h2><button class="btn" onclick="closeModal()">← Back</button></div><div class="formgrid"><div class="field"><label>Name</label><input id="fn" value="'+esc(s.name)+'"></div><div class="field"><label>Monthly Salary</label><input id="fsal" type="number" min="0" value="'+s.salary+'"></div><div class="field full"><label>School / College</label><input id="fsch" value="'+esc(s.school)+'"></div><div class="field full"><label>Subjects</label><input id="fsub" value="'+esc(s.subject)+'"></div><div class="field"><label>Start Month</label><input id="fst" type="month" value="'+s.start+'"></div><div class="field"><label>Ending Month (optional)</label><input id="fen" type="month" value="'+(s.end||'')+'"></div><div class="field"><label>Phone / WhatsApp</label><input id="fph" value="'+esc(s.phone||'')+'"></div><div class="field"><label>Class</label><input id="fclass" value="'+esc(s.className||'')+'"></div><div class="field"><label>Roll</label><input id="froll" value="'+esc(s.roll||'')+'"></div><div class="field"><label>Guardian Name</label><input id="fguardian" value="'+esc(s.guardian||'')+'"></div><div class="field"><label>Guardian Phone</label><input id="fguardianPhone" value="'+esc(s.guardianPhone||'')+'"></div><div class="field full"><label>Address</label><input id="faddress" value="'+esc(s.address||'')+'"></div><div class="field full"><label>Student Notes</label><textarea id="fnotes" rows="2">'+esc(s.notes||'')+'</textarea></div><div class="field"><label>Student Photo</label><input id="studentPhoto" type="file" accept="image/*"></div><div class="field full"><label>Weekly Routine & Time</label><p class="mut small">Running students automatically stay active here until an ending month is set.</p><div class="routine-grid">'+routineEditor(s.routine)+'</div></div></div><button class="btn green" style="width:100%" onclick="saveStudent(\''+id+'\')">✓ Save Student & Routine</button>';modalWrap.classList.add('open')}
+function saveStudent(id){let old=S.students.find(x=>x.id===id);let s={id:id||uid(),name:fn.value.trim(),school:fsch.value.trim(),subject:fsub.value.trim(),salary:Number(fsal.value)||0,start:fst.value||'2026-08',end:fen.value||'',phone:fph.value.trim(),className:fclass.value.trim(),roll:froll.value.trim(),guardian:fguardian.value.trim(),guardianPhone:fguardianPhone.value.trim(),address:faddress.value.trim(),notes:fnotes.value.trim(),routine:collectRoutine(),taught:old?.taught||[],pay:old?.pay||{},history:old?.history||{},attendance:old?.attendance||{},marks:old?.marks||[],archived:old?.archived||false,photo:old?.photo||''};if(!s.name)return toast('Student name required');let file=studentPhoto.files[0];if(file){let r=new FileReader();r.onload=()=>{s.photo=r.result;commitStudent(s,id)};r.readAsDataURL(file)}else commitStudent(s,id)}
+function commitStudent(s,id){if(id)S.students=S.students.map(x=>x.id===id?s:x);else S.students.push(s);save();closeModal();renderAll();if(activeStudent===s.id)renderProfile();toast('Student + weekly routine saved ✓ — updated instantly')}
+function archiveStudent(id){let s=S.students.find(x=>x.id===id);s.archived=!s.archived;save();renderStudents();toast(s.archived?'Student archived':'Student restored')}
+function closeModal(){modalWrap.classList.remove('open')}
+function renderRoutine(){let days=DAYS;routineList.innerHTML=days.map(d=>{let a=S.students.filter(running).flatMap(s=>s.routine.filter(r=>r.enabled&&r.day===d).map(r=>({s,r}))).sort((a,b)=>a.r.start.localeCompare(b.r.start));return a.length?'<div class="card"><h3>⏰ '+d+'</h3>'+a.map(x=>'<div class="listitem"><b>🎓 '+esc(x.s.name)+'</b><br>📚 '+esc(x.s.subject)+'<br>⏰ <b>'+formatTime(x.r.start)+' – '+formatTime(x.r.end)+'</b><div class="btnrow"><button class="btn" onclick="openProfile(\''+x.s.id+'\')">👤 Profile</button><button class="btn orange" onclick="rescheduleStudent(\''+x.s.id+'\',\''+d+'\')">🔄 Reschedule</button></div></div>').join('')+'</div>':''}).join('')||'<div class="card">No running routine slots.</div>';conflicts.innerHTML=(S.events||[]).map(e=>'<div class="card"><div class="row"><b>'+esc(e.type)+': '+esc(e.title)+'</b><span class="badge '+(e.conflict?'bred':'bgreen')+'">'+(e.conflict?'⚠️ Conflict':'✓ Clear')+'</span></div><p class="mut">'+esc(e.date)+' • '+formatTime(e.time)+'</p><button class="btn red" onclick="deleteEvent(\''+e.id+'\')">Delete</button></div>').join('')||'<div class="card">No university/exam events.</div>'}
+function rescheduleStudent(id,day){let s=S.students.find(x=>x.id===id);modal.innerHTML='<h2>🔄 Reschedule '+esc(s.name)+'</h2><p class="mut">Choose a new day/time. This creates a one-time rescheduled teaching record.</p><div class="field"><label>New Date</label><input id="rsDate" type="date"></div><div class="field"><label>New Start</label><input id="rsTime" type="time" value="18:00"></div><button class="btn green" style="width:100%" onclick="saveReschedule(\''+id+'\')">Save Reschedule</button>';modalWrap.classList.add('open')}
+function saveReschedule(id){let d=rsDate.value;if(!d)return toast('Choose date');let s=S.students.find(x=>x.id===id);s.history[d]={status:'rescheduled',time:rsTime.value};save();closeModal();renderAll();toast('Rescheduled ✓')}
+function scheduleModal(){modal.innerHTML='<h2>🏫 Add University / Exam</h2><div class="field"><label>Type</label><select id="evType"><option>University Class</option><option>Exam</option><option>Assignment</option><option>Holiday</option></select></div><div class="field"><label>Title</label><input id="evTitle"></div><div class="field"><label>Date</label><input id="evDate" type="date"></div><div class="field"><label>Time</label><input id="evTime" type="time" value="18:00"></div><button class="btn green" style="width:100%" onclick="saveEvent()">Save & Detect Conflicts</button>';modalWrap.classList.add('open')}
+function saveEvent(){let d=evDate.value,t=evTime.value;if(!d)return toast('Choose date');let day=DAYS[(new Date(d+'T00:00:00').getDay()+6)%7],mins=toMin(t),conf=S.students.some(s=>running(s)&&s.routine.some(r=>r.enabled&&r.day===day&&rangesOverlap(mins,toMin(addHour(t)),toMin(r.start),toMin(r.end))));S.events.push({id:uid(),type:evType.value,title:evTitle.value||evType.value,date:d,time:t,conflict:conf});save();closeModal();renderRoutine();toast(conf?'⚠️ Conflict detected':'Event saved ✓')}
+function deleteEvent(id){S.events=S.events.filter(e=>e.id!==id);save();renderRoutine()}
+function toMin(t){let [h,m]=t.split(':').map(Number);return h*60+m}function addHour(t){let x=toMin(t)+60;return String(Math.floor(x/60)%24).padStart(2,'0')+':'+String(x%60).padStart(2,'0')}function rangesOverlap(a,b,c,d){return Math.max(a,c)<Math.min(b,d)}
+function calendar(s){let now=new Date(),y=now.getFullYear(),m=now.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),h='<div class="calendar">'+['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>'<div class="calhead">'+x+'</div>').join('');for(let i=0;i<first;i++)h+='<div></div>';for(let d=1;d<=days;d++){let k=key(y,m+1)+'-'+String(d).padStart(2,'0'),st=s.history[k]?.status|| (s.taught.includes(k)?'taught':'');h+='<button class="day '+(st||'')+'" onclick="cycleDay(\''+s.id+'\',\''+k+'\')">'+d+(st==='taught'?' ✓':st==='cancel'?' ×':st==='resched'?' ↗':'')+'</button>'}return h+'</div>'}
+function cycleDay(id,k){let s=S.students.find(x=>x.id===id),cur=s.history?.[k]?.status||'';let next=cur===''?'taught':cur==='taught'?'cancel':cur==='cancel'?'resched':'';s.history=s.history||{};s.taught=s.taught||[];if(next==='taught')s.taught=[...new Set([...s.taught,k])];else s.taught=s.taught.filter(x=>x!==k);if(next)s.history[k]={status:next};else delete s.history[k];save();refreshInstant();toast(next==='taught'?'Taught ✓ — progress updated instantly':next==='cancel'?'Cancelled ✓ — progress updated instantly':next==='resched'?'Rescheduled ✓ — progress updated instantly':'Teaching mark cleared ✓')}
+
+function studentYears(s){let st=String(s.start||'').slice(0,4),en=String(s.end||'').slice(0,4)||String(new Date().getFullYear());let a=[];for(let y=+st;y<=+en;y++)a.push(y);if(!s.end){let cy=new Date().getFullYear();for(let y=+st;y<=cy;y++)if(!a.includes(y))a.push(y)}return a.sort((a,b)=>b-a)}
+function allPaymentYears(){let a=[];S.students.forEach(s=>studentYears(s).forEach(y=>{if(!a.includes(y))a.push(y)}));return a.sort((a,b)=>b-a)}
+
+function monthTeachingStats(s,y,m){
+  const k=key(y,m);
+  const taught=(s.taught||[]).filter(x=>x.startsWith(k)).length;
+  const cancelled=Object.entries(s.history||{}).filter(([d,v])=>d.startsWith(k)&&v?.status==='cancel').length;
+  const rescheduled=Object.entries(s.history||{}).filter(([d,v])=>d.startsWith(k)&&(v?.status==='resched'||v?.status==='rescheduled')).length;
+  const totalRecorded=taught+cancelled+rescheduled;
+  return {key:k,taught,cancelled,rescheduled,totalRecorded};
+}
+function studentMonthCalendar(s,y,m){
+  const first=new Date(y,m-1,1).getDay();
+  const days=new Date(y,m,0).getDate();
+  let h='<div class="calendar">'+['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>'<div class="calhead">'+x+'</div>').join('');
+  for(let i=0;i<first;i++)h+='<div></div>';
+  for(let d=1;d<=days;d++){
+    const k=key(y,m)+'-'+String(d).padStart(2,'0');
+    const st=s.history?.[k]?.status || ((s.taught||[]).includes(k)?'taught':'');
+    h+='<button class="day '+esc(st)+'" onclick="cycleDay(\''+s.id+'\',\''+k+'\')" title="'+esc(st||'Not marked')+'">'+d+(st==='taught'?' ✓':st==='cancel'?' ×':(st==='resched'||st==='rescheduled')?' ↗':'')+'</button>';
+  }
+  return h+'</div>';
+}
+function renderProfile(){
+  let s=S.students.find(x=>x.id===activeStudent);if(!s)return;
+  let y=Number(window.profileYear||new Date().getFullYear());
+  let months=activeMonths(s,y),
+      received=Object.entries(s.pay||{}).filter(([k,p])=>k.startsWith(y+'-')&&!p?.na).reduce((a,[k,v])=>a+Number(v?.received||0),0),
+      due=months.reduce((a,k)=>a+(monthStatus(s,k)==='pending'||isNA(s,k)?0:Math.max(0,monthSalary(s,k)-(s.pay[k]?.received||0))),0);
+  let years=studentYears(s);
+  let now=new Date(), curY=now.getFullYear(),curM=now.getMonth()+1;
+  let prevDate=new Date(curY,curM-2,1), prevY=prevDate.getFullYear(),prevM=prevDate.getMonth()+1;
+  let curStats=monthTeachingStats(s,curY,curM), prevStats=monthTeachingStats(s,prevY,prevM);
+  let curLabel=monthName(curStats.key), prevLabel=monthName(prevStats.key);
+  let curProgress=Math.min(100,curStats.taught/18*100), prevProgress=Math.min(100,prevStats.taught/18*100);
+
+  profileBox.innerHTML='<div class="card"><div class="profileHead">'+
+    (s.photo?'<img class="avatar" src="'+s.photo+'">':'<div class="avatar" style="display:grid;place-items:center;font-size:30px">👤</div>')+
+    '<div><h1 style="margin:0">'+esc(s.name)+'</h1><span class="badge '+(s.archived?'bblue':s.end?'byellow':'bgreen')+'">'+
+    (s.archived?'Archived':s.end?'Ending':'Running')+'</span></div></div>'+
+    '<p class="meta">🏫 '+esc(s.school)+'<br>📚 '+esc(s.subject)+'<br>📞 '+esc(s.phone||'Not set')+
+    '<br>💰 '+money(s.salary)+'/month<br>📅 '+esc(s.start)+' → '+(s.end||'Ongoing')+'</p>'+
+    '<p class="meta">🎓 Class: '+esc(s.className||'Not set')+' • Roll: '+esc(s.roll||'Not set')+
+    '<br>👨‍👩‍👦 Guardian: '+esc(s.guardian||'Not set')+' • '+esc(s.guardianPhone||'')+
+    '<br>📍 '+esc(s.address||'Not set')+'</p>'+
+    '<div class="grid"><div class="metric"><span class="mut">'+y+' Received</span><b>'+money(received)+
+    '</b></div><div class="metric"><span class="mut">'+y+' Due</span><b>'+money(due)+'</b></div></div>'+
+    '<div class="card"><h3>📈 Teaching Progress</h3>'+
+    '<div class="grid">'+
+    '<div class="metric"><span class="mut">Current Month • '+esc(curLabel)+'</span><b>'+curStats.taught+' days</b><small class="mut">✓ Taught • '+curStats.cancelled+' Cancelled • '+curStats.rescheduled+' Rescheduled</small></div>'+
+    '<div class="metric"><span class="mut">Last Month • '+esc(prevLabel)+'</span><b>'+prevStats.taught+' days</b><small class="mut">✓ Taught • '+prevStats.cancelled+' Cancelled • '+prevStats.rescheduled+' Rescheduled</small></div>'+
+    '</div>'+
+    '<div class="listitem"><div class="row"><b>📚 Current Month</b><span>'+curStats.taught+' taught</span></div><div class="progress"><i style="width:'+curProgress+'%"></i></div></div>'+
+    '<div class="listitem"><div class="row"><b>📚 Last Month</b><span>'+prevStats.taught+' taught</span></div><div class="progress"><i style="width:'+prevProgress+'%"></i></div></div>'+
+    '</div>'+
+    '<div class="card"><h3>💳 Year-wise Payment History</h3><div class="btnrow">'+
+    years.map(yy=>'<button class="btn '+(yy===y?'purple':'')+'" onclick="profileYear='+yy+';renderProfile()">'+yy+'</button>').join('')+
+    '</div>'+months.map(k=>payRow(s,k)).join('')+'</div>'+
+    '<div class="card"><h3>📅 Teaching Calendar</h3><p class="mut small">Tap a date to mark Taught → Cancelled → Rescheduled → Clear.</p>'+
+    '<div class="grid">'+
+    '<div><div class="row" style="margin-bottom:7px"><b>Current Month</b><span class="badge bgreen">'+esc(curLabel)+'</span></div>'+
+    studentMonthCalendar(s,curY,curM)+'</div>'+
+    '<div><div class="row" style="margin-bottom:7px"><b>Last Month</b><span class="badge bblue">'+esc(prevLabel)+'</span></div>'+
+    studentMonthCalendar(s,prevY,prevM)+'</div>'+
+    '</div></div>'+
+    '<div class="btnrow"><button class="btn green" onclick="markToday(\''+s.id+'\')">📚 Taught Today</button><button class="btn blue" onclick="openPayments(\''+s.id+'\')">💳 Payments</button></div>'+
+    '<div class="btnrow"><button class="btn" onclick="callStu(\''+s.id+'\')">📞 Call</button><button class="btn blue" onclick="waStu(\''+s.id+'\')">💬 WhatsApp</button></div>'+
+    '<div class="btnrow"><button class="btn purple" onclick="makeReceipt(\''+s.id+'\')">🧾 Receipt</button><button class="btn orange" onclick="studentModal(\''+s.id+'\')">✏️ Edit Profile</button></div></div>';
+}
+function payRow(s,k){let p=s.pay[k]||{received:0},rec=Number(p.received||0),na=!!p.na,st=monthStatus(s,k),future=st==='pending';let salary=Number(p.salary??s.salary??0),due=Math.max(0,salary-rec);let cls=na?'na':future?'pending':rec>=salary?'paid':rec>0?'partial':'due';let label=na?'N/A':future?'Pending':rec>=salary?'✓ Paid':rec>0?'Partial':'Due';let undo=(!na&&rec>0)?`<button class="btn red" onclick="undoPayment('${s.id}','${k}')">↩ Undo</button>`:'';let receipt=(!na&&rec>0)?`<button class="btn purple" onclick="showPaymentReceipt('${s.id}','${k}')">🧾 Receipt</button><button class="btn blue" onclick="downloadReceiptFor('${s.id}','${k}')">⬇️ Download</button><button class="btn green" onclick="shareReceiptFor('${s.id}','${k}')">↗ Share</button>`:'';let date=p.date?(' • Paid '+new Date(p.date+'T00:00:00').toLocaleDateString()):'';return `<div class="listitem"><div class="row"><div><b>${monthName(k)}</b><br><span class="badge ${cls==='paid'?'bgreen':cls==='pending'?'bblue':cls==='na'?'bblue':cls==='partial'?'byellow':'bred'}">${label}</span><br><span class="mut">Received ${money(rec)} • Due ${money(na?0:due)}${date}</span>${p.note?'<br><span class="small">📝 '+esc(p.note)+'</span>':''}</div><div style="text-align:right"><button class="btn yellow" onclick="editPay('${s.id}','${k}')">৳ Edit</button> <button class="btn" onclick="editPayNote('${s.id}','${k}')">📝 Note</button> <button class="btn" onclick="toggleNA('${s.id}','${k}')">${na?'↩ Active':'N/A'}</button> ${receipt} ${undo} ${(!na&&due>0)?`<button class="btn green" onclick="quickPay('${s.id}','${k}')">${rec?'Add':'Received'}</button>`:''}</div></div></div>`}
+function undoPayment(id,k){let s=S.students.find(x=>x.id===id);if(!s)return;let p=s.pay[k]||{};if(!Number(p.received||0))return toast('No payment to undo');if(!confirm('Undo '+money(p.received)+' payment for '+monthName(k)+'?'))return;s.pay[k]={...p,received:0,updated:new Date().toISOString(),undone:true};lastReceipt=null;save();renderAll();if(activeStudent===id)renderPayments();toast('Payment undone ✓')}
+function editPayNote(id,k){let s=S.students.find(x=>x.id===id);if(!s)return;let p=s.pay[k]||{received:0};let v=prompt('Note for '+monthName(k),p.note||'');if(v===null)return;s.pay[k]={...p,note:v,updated:new Date().toISOString()};save();renderAll();if(activeStudent===id)renderPayments();toast('Payment note saved ✓')}
+function openPayments(id){activeStudent=id;if(!window.profileYear)window.profileYear=new Date().getFullYear();page('payments');renderPayments()}
+function renderPayments(){
+  let y=Number(window.profileYear||new Date().getFullYear());
+  let tabs=allPaymentYears().map(yy=>'<button class="btn '+(yy===y?'purple':'')+'" onclick="profileYear='+yy+';renderPayments()">'+yy+'</button>').join('');
+  let groups=S.students.map(st=>{
+    if(!studentYears(st).includes(y))return '';
+    let months=activeMonths(st,y);
+    let received=months.reduce((a,k)=>a+Number(st.pay?.[k]?.received||0),0);
+    let due=months.reduce((a,k)=>a+(isNA(st,k)?0:Math.max(0,monthSalary(st,k)-Number(st.pay?.[k]?.received||0))),0);
+    return '<div class="card paymentStudentGroup"><div class="row"><div><h3 style="margin:0">🎓 '+esc(st.name)+'</h3><span class="mut small">'+esc(st.school||'Student Profile')+' • Received '+money(received)+' • Due '+money(due)+'</span></div><button class="btn blue" onclick="openProfile(\''+st.id+'\');openPayments(\''+st.id+'\')">Profile</button></div><div class="list">'+months.map(k=>payRow(st,k)).join('')+'</div></div>';
+  }).join('');
+  payList.innerHTML='<div class="card"><div class="row"><h3>💳 Payment Center — '+y+'</h3><button class="btn" onclick="page(\'students\')">← Back</button></div><p class="mut small">Payment history is grouped by student profile. Each student has one clear history section.</p><div class="btnrow" style="flex-wrap:wrap">'+tabs+'</div></div>'+ (groups||'<div class="card">No students active in this year.</div>');
+}
+function paymentEntry(id,k){
+  let s=S.students.find(x=>x.id===id);if(!s)return;let p=s.pay[k]||{received:0},today=new Date().toISOString().slice(0,10),received=Number(p.received||0),salary=Number(window._quickSalaryOverride?.[id]?.[k] ?? monthSalary(s,k));
+  modal.innerHTML=`<div class="row"><h2>💳 Payment Received</h2><button class="btn" onclick="closeModal()">← Back</button></div><p class="mut"><b>${esc(s.name)}</b> • ${monthName(k)}</p>
+  <div class="grid"><div class="metric"><span class="mut">Payment Month</span><b style="font-size:17px">${monthName(k)}</b></div><div class="metric"><span class="mut">Monthly Salary</span><b>${money(salary)}</b></div><div class="metric"><span class="mut">Already Paid</span><b>${money(received)}</b></div><div class="metric"><span class="mut">Remaining Due</span><b>${money(Math.max(0,salary-received))}</b></div></div>
+  <div class="field"><label>Monthly Salary / Current Month Salary</label><input id="paySalary" type="number" min="0" value="${salary}"></div><div class="field"><label>Payment Amount Given</label><input id="payAmount" type="number" min="0" value="${received}"></div><div class="field"><label>Payment date</label><input id="payDate" type="date" value="${esc(p.date||today)}"></div><div class="field"><label>Note</label><textarea id="payNote" rows="2">${esc(p.note||'')}</textarea></div>
+  <div class="btnrow"><button class="btn green" onclick="savePaymentEntry('${id}','${k}')">✓ Save Payment</button><button class="btn" onclick="closeModal()">Cancel</button></div>`;
+  modalWrap.classList.add('open');
+}
+function isReceiptAutoMonth(k){
+  const now=new Date();
+  const prev1=new Date(now.getFullYear(),now.getMonth()-1,1);
+  const prev2=new Date(now.getFullYear(),now.getMonth()-2,1);
+  return k===key(prev1.getFullYear(),prev1.getMonth()+1)||k===key(prev2.getFullYear(),prev2.getMonth()+1);
+}
+function savePaymentEntry(id,k){
+  let s=S.students.find(x=>x.id===id);if(!s)return;
+  let p=s.pay[k]||{received:0},amount=Number(payAmount.value||0),salary=Number(paySalary.value||0),date=payDate.value||new Date().toISOString().slice(0,10);
+  if(amount<0||salary<0)return toast('Invalid amount');
+  s.paymentHistory=s.paymentHistory||{};
+  s.paymentHistory[k]=[...(s.paymentHistory[k]||[]),{received:p.received||0,salary:s.salary||0,date:p.date||null,updated:new Date().toISOString()}];
+  let finalAmount=Math.min(salary,amount);
+  s.pay[k]={...p,received:finalAmount,salary,date,note:payNote.value.trim(),updated:new Date().toISOString(),na:false};
+  lastReceipt={id,k,amount:finalAmount,date};
+  if(window._quickSalaryOverride?.[id])delete window._quickSalaryOverride[id][k];
+  save();closeModal();renderAll();if(activeStudent===id)renderProfile();
+  if(isReceiptAutoMonth(k)){
+    toast('Payment saved ✓ Opening receipt');
+    setTimeout(()=>showPaymentReceipt(id,k),120);
+  }else{
+    lastReceipt=null;
+    toast('Payment saved ✓ — receipt can be generated anytime');
+  }
+}
+function quickPay(id,k){let s=S.students.find(x=>x.id===id);if(!s||isNA(s,k))return toast('Activate this month before payment');paymentEntry(id,k)}
+function quickPayment(){
+  let run=S.students.filter(running);if(!run.length)return toast('No running students');
+  modal.innerHTML=`<div class="row"><h2>💳 Quick Payment</h2><button class="btn" onclick="closeModal()">✕</button></div><p class="mut small">Select a student and choose only an unpaid/due month. Paid and future months are hidden.</p>
+  <div class="field"><label>Student</label><select id="quickStudentSelect" onchange="updateQuickPaymentPreview()"><option value="">Select student...</option>${run.map(s=>'<option value="'+esc(s.id)+'">'+esc(s.name)+'</option>').join('')}</select></div>
+  <div class="field"><label>Payment Month</label><select id="quickMonthSelect" onchange="updateQuickPaymentPreview()"><option value="">Select student first...</option></select></div>
+  <div id="quickPaymentPreview" class="card"><span class="mut">Select a student and payment month.</span></div><button class="btn green" style="width:100%" onclick="quickPaymentContinue()">৳ Continue to Payment</button>`;
+  modalWrap.classList.add('open');
+}
+function quickPaymentMonthOptions(s){
+  let now=new Date(),cur=key(now.getFullYear(),now.getMonth()+1),keys=new Set();
+  Object.keys(s.pay||{}).forEach(k=>keys.add(k));
+  activeMonths(s,now.getFullYear()).forEach(k=>keys.add(k));
+  let arr=[...keys].filter(k=>k<=cur&&!isNA(s,k)&&['due','partial'].includes(monthStatus(s,k))).sort().reverse();
+  return arr.length?arr.map(k=>'<option value="'+k+'">'+monthName(k)+'</option>').join(''):'<option value="">No due month available</option>';
+}
+function updateQuickPaymentPreview(){
+  let id=quickStudentSelect.value;
+  if(!id){quickMonthSelect.innerHTML='<option value="">Select student first...</option>';quickPaymentPreview.innerHTML='<span class="mut">Select a student and payment month.</span>';return}
+  let previous=quickMonthSelect.value;
+  let s=S.students.find(x=>x.id===id),opts=quickPaymentMonthOptions(s);
+  quickMonthSelect.innerHTML=opts||'<option value="">No payment months</option>';
+  if(previous && [...quickMonthSelect.options].some(o=>o.value===previous)) quickMonthSelect.value=previous;
+  if(!quickMonthSelect.value && quickMonthSelect.options.length) quickMonthSelect.selectedIndex=0;
+  let k=quickMonthSelect.value;
+  if(!k){quickPaymentPreview.innerHTML='<span class="mut">Select a payment month.</span>';return}
+  let p=s.pay[k]||{received:0},rec=Number(p.received||0),sal=monthSalary(s,k),st=monthStatus(s,k),due=Math.max(0,sal-rec);
+  let status=st==='due'?'Due':st==='pending'?'Pending':st==='partial'?'Partial':st==='paid'?'Paid':(p.na?'N/A':'Active');
+  quickPaymentPreview.innerHTML='<div class="grid"><div><span class="mut small">Payment Month</span><br><b>'+monthName(k)+'</b></div><div><span class="mut small">Monthly Salary</span><br><input id="quickSalary" type="number" min="0" value="'+sal+'" style="width:100%;font-weight:800" onchange="updateQuickSalaryPreview()"></div><div><span class="mut small">Already Paid</span><br><b>'+money(rec)+'</b></div><div><span class="mut small">Remaining Due</span><br><b id="quickDue">'+money(due)+'</b></div></div><p class="small mut" style="margin-bottom:0">Status: <b>'+esc(status)+'</b></p>';
+}
+function updateQuickSalaryPreview(){let id=quickStudentSelect.value,k=quickMonthSelect.value;if(!id||!k||!quickSalary)return;let v=Math.max(0,Number(quickSalary.value||0));let s=S.students.find(x=>x.id===id),rec=Number(s?.pay?.[k]?.received||0);let d=Math.max(0,v-rec);if(quickDue)quickDue.textContent=money(d)}
+function quickPaymentContinue(){let id=quickStudentSelect.value,k=quickMonthSelect.value;if(!id)return toast('Select a student first');if(!k)return toast('Select payment month');let s=S.students.find(x=>x.id===id);if(isNA(s,k))return toast('Activate this month before payment');let v=quickSalary?Math.max(0,Number(quickSalary.value||0)):monthSalary(s,k);window._quickSalaryOverride=window._quickSalaryOverride||{};window._quickSalaryOverride[id]=window._quickSalaryOverride[id]||{};window._quickSalaryOverride[id][k]=v;closeModal();quickPay(id,k)}
+function quickPaymentByName(){let q=(quickStudentSearch?.value||'').trim().toLowerCase();let s=S.students.find(x=>running(x)&&x.name.toLowerCase()===q)||S.students.find(x=>running(x)&&x.name.toLowerCase().includes(q));if(!s)return toast('Student not found');let now=new Date(),k=key(now.getFullYear(),now.getMonth()+1);closeModal();quickPay(s.id,k)}
+function toggleNA(id,k){let s=S.students.find(x=>x.id===id);if(!s)return toast('Student not found');s.pay=s.pay||{};s.pay[k]=s.pay[k]||{received:0};s.pay[k].na=!s.pay[k].na;if(s.pay[k].na)s.pay[k].received=0;save();renderAll();if(activeStudent===id)renderPayments();toast(s.pay[k].na?'Marked N/A':'Payment month activated ✓')}
+function editPay(id,k){let s=S.students.find(x=>x.id===id);if(!s||isNA(s,k))return toast('Activate this month before editing payment');paymentEntry(id,k)}
+function localDateKey(d=new Date()){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function refreshInstant(){renderHome();renderStudents();renderRoutine();renderFinance();renderStats();if(activeStudent)renderProfile();renderCalendar();renderNotes();renderTasks();renderMonthlyReport()}
+function markToday(id){let s=S.students.find(x=>x.id===id);if(!s)return toast('Student not found');let k=localDateKey();s.taught=[...new Set([...(s.taught||[]),k])];s.history=s.history||{};s.history[k]={status:'taught'};save();refreshInstant();toast('Teaching day marked ✓ — progress updated instantly')}
+function renderFinance(){let y=+fy.value,years=[...new Set([new Date().getFullYear(),...S.students.flatMap(s=>[s.start,s.end,...Object.keys(s.pay||{})].filter(Boolean).map(x=>+String(x).slice(0,4)))])].sort((a,b)=>a-b);incomeYearTabs.innerHTML=years.map(yy=>'<button class="btn '+(yy===y?'purple':'')+'" onclick="fy.value='+yy+';renderFinance()">📄 '+yy+'</button>').join('');let ms=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],tot=Array(12).fill(0),grand=0,h='<tr><th>Name</th><th>School / College</th>'+ms.map(x=>'<th>'+x+'</th>').join('')+'<th>Total</th></tr>',rows='';S.students.filter(s=>!s.archived&&activeMonths(s,y).length>0).forEach(s=>{let total=0,c=ms.map((m,i)=>{let k=key(y,i+1),p=s.pay[k],rec=Number(p?.received||0),act=activeMonths(s,y).includes(k);if(!act||p?.na)return '<td class="na">N/A</td>';let pending=monthStatus(s,k)==='pending';if(!pending){tot[i]+=rec;total+=rec}if(pending)return '<td class="pending">Pending</td>';if(rec>=s.salary)return '<td class="paid">'+money(rec)+'</td>';if(rec>0)return '<td class="partial">'+money(rec)+'</td>';return '<td class="due">Due</td>'});grand+=total;rows+='<tr><th>'+esc(s.name)+'</th><td>'+esc(s.school)+'</td>'+c.join('')+'<td class="total">'+money(total)+'</td></tr>'});salary.innerHTML=h+rows+'<tr><th colspan="2">TOTAL '+y+'</th>'+tot.map(x=>'<th class="total">'+money(x)+'</th>').join('')+'<th class="total">'+money(grand)+'</th></tr>';let studentTotals=S.students.filter(s=>!s.archived).map(s=>{let total=Object.entries(s.pay||{}).filter(([k,p])=>k.startsWith(y+'-')&&!p?.na).reduce((a,[k,p])=>a+(monthStatus(s,k)==='pending'?0:Number(p?.received||0)),0);return '<div class="listitem row"><b>'+esc(s.name)+'</b><strong>'+money(total)+'</strong></div>'}).join('')||'<div class="mut">No students.</div>';lastReport.innerHTML='<div class="grid"><div class="metric"><span class="mut">Total Received '+y+'</span><b>'+money(grand)+'</b></div><div class="metric"><span class="mut">Students Tracked</span><b>'+S.students.filter(s=>!s.archived).length+'</b></div></div><div class="card"><h3>📊 '+y+' Student-wise Total Income</h3>'+studentTotals+'</div>'}
+function renderStats(){let income=0,due=0,days=0;let cy=new Date().getFullYear();S.students.forEach(s=>{Object.entries(s.pay||{}).forEach(([k,p])=>{if(!p?.na)income+=Number(p?.received||0)});activeMonths(s,cy).forEach(k=>{if(!isNA(s,k)&&monthStatus(s,k)!=='pending')due+=Math.max(0,monthSalary(s,k)-(s.pay[k]?.received||0))});days+=s.taught.length});stIncome.textContent=money(income);stDue.textContent=money(due);stDays.textContent=days;stActive.textContent=S.students.filter(running).length;let years=allPaymentYears(),vals=years.map(y=>S.students.reduce((a,s)=>a+Object.entries(s.pay).filter(([k])=>k.startsWith(y+'-')).reduce((x,[,p])=>x+Number(p?.received||0),0),0)),max=Math.max(...vals,1);chart.innerHTML=years.map((y,i)=>'<div class="bar"><b>'+money(vals[i])+'</b><i style="height:'+Math.max(8,vals[i]/max*160)+'px"></i><span>'+y+'</span></div>').join('');let nowK=key(new Date().getFullYear(),new Date().getMonth()+1),pm=new Date();pm.setMonth(pm.getMonth()-1);let prevK=key(pm.getFullYear(),pm.getMonth()+1);
+teachingStats.innerHTML=S.students.filter(running).map(s=>{let a=s.taught.filter(x=>x.startsWith(nowK)),b=s.taught.filter(x=>x.startsWith(prevK));return '<div class="card"><b>'+esc(s.name)+'</b><div class="mut small">Running month: '+a.length+' days • Last month: '+b.length+' days</div><div class="progress"><i style="width:'+Math.min(100,a.length/30*100)+'%"></i></div></div>'}).join('')||'No running-student records.'}
+function renderCV(){
+  let u=S.user;
+  cv.innerHTML='<div class="cvpro"><div class="profileHead">'+(u.photo?'<img class="avatar" src="'+u.photo+'">':'<div class="avatar" style="display:grid;place-items:center;font-size:30px">👨‍🏫</div>')+'<div><h1 style="margin:0">'+esc(u.name)+'</h1><b>'+esc(u.designation||'Mathematics Tutor')+'</b><p class="mut">'+esc(u.email)+' • '+esc(u.phone||'')+(u.address?' • '+esc(u.address):'')+'</p></div></div><h3>PROFESSIONAL SUMMARY</h3><p>'+esc(u.about||'Dedicated mathematics educator focused on structured learning, student progress and clear communication.')+'</p><h3>EDUCATION</h3><p><b>'+esc(u.education||'BSc in Mathematics')+'</b><br>'+esc(u.university||'Dhaka Central University')+'</p><h3>PROFESSIONAL EXPERIENCE</h3><p>'+esc(u.experience||'Private Mathematics Tutor')+'</p><h3>CORE COMPETENCIES</h3><p>'+esc(u.skills||'Mathematics • Teaching • Student Progress • Assessment')+'</p><h3>SUBJECTS & TEACHING METHODS</h3><p>'+esc(u.subjects||'Mathematics')+(u.teachingMethods?'<br>'+esc(u.teachingMethods):'')+'</p>'+((u.certifications||u.achievements)?'<h3>CERTIFICATIONS & ACHIEVEMENTS</h3><p>'+esc(u.certifications||'')+(u.achievements?'<br>'+esc(u.achievements):'')+'</p>':'')+'<h3>PROFESSIONAL DETAILS</h3><p>Languages: '+esc(u.languages||'')+'<br>Availability: '+esc(u.availability||'')+'<br>Institution: '+esc(u.institution||'')+(u.dob?'<br>Date of Birth: '+esc(u.dob):'')+'</p><h3>CONTACT</h3><p>'+esc(u.email)+'<br>'+esc(u.phone||'')+'<br>'+esc(u.address||'')+(u.social?'<br>'+esc(u.social):'')+(u.portfolio?'<br>'+esc(u.portfolio):'')+'</p></div>';
+}
+function printCV(){
+  if(!S)return;let w=window.open('','_blank','width=950,height=1100');if(!w)return toast('Popup blocked. Please allow popups to print CV');
+  w.document.write('<!doctype html><html><head><title>'+esc(S.user.name||'Teacher')+' - Curriculum Vitae</title><style>body{margin:0;background:#fff;color:#182230;font-family:Arial,Helvetica,sans-serif}.cvpro{max-width:850px;margin:25px auto;padding:38px;border:1px solid #d9e0e7}.profileHead{display:flex;gap:18px;align-items:center;border-bottom:3px solid #1b4f72;padding-bottom:18px}.avatar{width:100px;height:100px;object-fit:cover;border:1px solid #ccd5df}.cvpro h1{font-size:30px;margin:0 0 4px}.cvpro h3{font-size:12px;letter-spacing:.08em;color:#1b4f72;border-bottom:1px solid #d9e0e7;padding-bottom:7px;margin-top:24px}.cvpro p{line-height:1.6}.mut{color:#667085}@media print{.cvpro{border:0!important;margin:0!important;max-width:none!important}}</style></head><body class="cv-print-page">'+cv.innerHTML+'</body></html>');
+  w.document.close();setTimeout(()=>{w.focus();w.print();w.close()},350);
+}
+let reminderLast='';
+function checkTomorrowRoutine(){if(!S)return;let now=new Date(),tom=new Date(now);tom.setDate(now.getDate()+1);let day=DAYS[(tom.getDay()+6)%7],mins=now.getHours()*60+now.getMinutes();let keyR=tom.toISOString().slice(0,10)+'|'+day;if(mins%1===0&&reminderLast!==keyR){let items=S.students.filter(running).map(s=>({s,r:s.routine.find(r=>r.enabled&&r.day===day)})).filter(x=>x.r);if(items.length){reminderLast=keyR;let msg='Kal '+day+' er routine: '+items.map(x=>x.s.name+' '+formatTime(x.r.start)).join(', ')+' — apni ki change korte chacchen?';if(Notification&&Notification.permission==='granted')new Notification('Tomorrow Routine Reminder',{body:msg});toast('⏰ '+msg);}}}
+function renderNotes(){let a=[];let today=DAYS[(new Date().getDay()+6)%7];S.students.filter(running).forEach(s=>{let slots=s.routine.filter(r=>r.enabled&&r.day===today);if(slots.length)a.push('⏰ '+s.name+' has '+slots.length+' tuition slot(s) today.');let prev=new Date();prev.setMonth(prev.getMonth()-1);let prevK=key(prev.getFullYear(),prev.getMonth()+1),prevRec=s.pay[prevK]?.received||0;if(prevRec<monthSalary(s,prevK)&&!isNA(s,prevK))a.push('⚠️ '+s.name+': '+monthName(prevK)+' due '+money(monthSalary(s,prevK)-prevRec)+'.')});(S.events||[]).filter(e=>e.conflict).forEach(e=>a.push('🏫 Conflict: '+e.title+' on '+e.date));let html=a.slice(0,10).map(x=>'<div class="card">'+esc(x)+'</div>').join('')||'<div class="card"><span class="badge bgreen">✓ All clear</span></div>';homeNotes.innerHTML=html;allNotes.innerHTML=html}
+function renderMonthlyReport(){let now=new Date(),k=reportMonth.value||key(now.getFullYear(),now.getMonth()+1),total=0,due=0,taught=0;let rows=S.students.filter(s=>!s.archived).map(s=>{let rec=s.pay[k]?.received||0,p=s.pay[k]||{},pending=monthStatus(s,k)==='pending',na=!!p.na,sal=monthSalary(s,k),d=pending||na?0:Math.max(0,sal-rec);if(!pending&&!na)total+=rec;due+=d;taught+=s.taught.filter(x=>x.startsWith(k)).length;return '<div class="listitem"><div class="row"><b>'+esc(s.name)+'</b><span>'+money(rec)+' / '+money(sal)+'</span></div><div class="progress"><i style="width:'+Math.min(100,sal>0?rec/sal*100:0)+'%"></i></div></div>'}).join('');monthlyReport.innerHTML='<div class="grid"><div class="metric"><span class="mut">Received</span><b>'+money(total)+'</b></div><div class="metric"><span class="mut">Due</span><b>'+money(due)+'</b></div><div class="metric"><span class="mut">Taught Days</span><b>'+taught+'</b></div><div class="metric"><span class="mut">Month</span><b>'+monthName(k)+'</b></div></div>'+rows}
+function makeReceipt(id){let s=S.students.find(x=>x.id===id);if(!s)return;let ks=Object.keys(s.pay||{}).filter(k=>Number(s.pay[k]?.received||0)>0).sort(),now=new Date(),k=ks[ks.length-1]||key(now.getFullYear(),now.getMonth()+1);showPaymentReceipt(id,k)}
+function showPaymentReceipt(id,k){let s=S.students.find(x=>x.id===id),p=s?.pay?.[k];if(!s||!p||!Number(p.received||0))return toast('No completed payment for this month');lastReceipt={id,k,amount:Number(p.received),date:p.date||new Date().toISOString().slice(0,10)};page('reports');renderReceipt();}
+function renderReceipt(){let r=lastReceipt;if(!r){receiptBox.innerHTML='<div class="receipt">No receipt selected.</div>';return}let s=S.students.find(x=>x.id===r.id);if(!s)return;let p=s.pay?.[r.k]||{},paidDate=p.date||r.date||new Date().toISOString().slice(0,10),u=S.user||{},salary=monthSalary(s,r.k),remaining=Math.max(0,salary-Number(p.received||0));receiptBox.innerHTML='<div class="receipt" id="printReceipt"><div class="receiptHead"><div class="receiptBrand">PAYMENT RECEIPT</div><div class="receiptMeta">Professional Tuition Payment Receipt</div><span class="receiptBadge">✓ PAYMENT RECEIVED</span></div><div class="row"><div><div class="receiptTitle">Tuition Fee Receipt</div><span class="mut small">Receipt date: '+new Date(paidDate+'T00:00:00').toLocaleDateString()+'</span></div><b>#'+esc(r.k.replace('-',''))+'</b></div><table><tr><th>Student</th><td>'+esc(s.name)+'</td><th>Month</th><td>'+monthName(r.k)+'</td></tr><tr><th>School</th><td>'+esc(s.school)+'</td><th>Received</th><td><b>'+money(r.amount)+'</b></td></tr><tr><th>Subject</th><td>'+esc(s.subject)+'</td><th>Payment Date</th><td>'+new Date(paidDate+'T00:00:00').toLocaleDateString()+'</td></tr><tr><th>Monthly Fee</th><td>'+money(salary)+'</td><th>Remaining Due</th><td>'+money(remaining)+'</td></tr></table><div class="totalBox"><span>Total Received</span><span>'+money(r.amount)+'</span></div>'+(p.note?'<div class="small" style="margin-top:12px"><b>Note:</b> '+esc(p.note)+'</div>':'')+'<div class="receiptSign"><div>________________<br><small>Guardian Signature</small></div><div class="teacherSignatureBlock">'+(u.signature?'<img src="'+u.signature+'">':'<div class="sig" style="height:58px;display:flex;align-items:center;justify-content:center;width:150px">'+esc(u.name||'Teacher')+'</div>')+'<div style="width:150px;border-top:1px solid #333;margin-top:2px;padding-top:4px"><small>Teacher Signature</small></div><div class="teacherTinyDetails"><div class="teacherTinyText"><b>'+esc(u.name||'Teacher')+'</b><div class="small">'+esc(u.designation||'Private Tutor')+(u.institution?' • '+esc(u.institution):'')+'</div><div class="small">'+esc(u.phone||'')+(u.email?' • '+esc(u.email):'')+'</div></div></div></div></div></div>'}
+function setReceiptFor(id,k){let s=S.students.find(x=>x.id===id),p=s?.pay?.[k];if(!s||!p||!Number(p.received||0))return false;lastReceipt={id,k,amount:Number(p.received),date:p.date||new Date().toISOString().slice(0,10)};return true}
+function downloadReceiptFor(id,k){if(!setReceiptFor(id,k))return toast('No completed payment');renderReceipt();downloadReceipt()}
+function shareReceiptFor(id,k){if(!setReceiptFor(id,k))return toast('No completed payment');shareReceipt()}
+function receiptPrintDocument(el){
+  const styles=`<style>
+    *{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#182230;font-family:Arial,Helvetica,sans-serif}
+    .printWrap{padding:28px 18px}.receipt{width:100%;max-width:760px;margin:auto;background:#fff;color:#182230;border:1px solid #d9e2ec;border-radius:18px;overflow:hidden;box-shadow:0 10px 35px rgba(20,40,70,.10)}
+    .receipt .receiptHead{background:linear-gradient(135deg,#4b24ff,#087ff5);color:#fff;padding:24px 26px;margin:0}
+    .receipt .receiptBrand{font-size:26px;font-weight:900;letter-spacing:.04em}.receipt .receiptMeta{font-size:12px;opacity:.92;line-height:1.6}
+    .receipt .receiptBadge{display:inline-block;margin-top:10px;padding:7px 12px;border-radius:99px;background:#ffffff22;border:1px solid #ffffff55;font-weight:800;font-size:12px}
+    .receipt>.row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 24px 8px}
+    .receipt .receiptTitle{font-size:20px;font-weight:900;margin:0 0 4px}.receipt table{width:calc(100% - 48px);margin:10px 24px 0;border-collapse:separate;border-spacing:0;border:1px solid #dfe6ee;border-radius:12px;overflow:hidden}
+    .receipt td,.receipt th{border:0;border-bottom:1px solid #e7ecf2;padding:11px 12px;text-align:left}.receipt tr:last-child td,.receipt tr:last-child th{border-bottom:0}
+    .receipt th{background:#f6f8fb;color:#52606d;font-size:11px;text-transform:uppercase;letter-spacing:.03em}.receipt td{font-size:13px}
+    .receipt .totalBox{margin:16px 24px;padding:14px 16px;background:#eefbf3;border:1px solid #bce8ca;border-radius:12px;font-weight:900;display:flex;justify-content:space-between}
+    .receipt .receiptSign{display:flex;justify-content:space-between;gap:24px;margin:30px 24px 24px;text-align:center;align-items:flex-start}.receipt .receiptSign>div{flex:1}
+    .receipt .teacherSignatureBlock{width:190px;min-width:190px;display:flex;flex-direction:column;align-items:center;text-align:center}.receipt .teacherSignatureBlock img{width:160px;height:62px;object-fit:contain}
+    .receipt .teacherTinyDetails{display:flex;justify-content:center;gap:7px;margin-top:7px;padding-top:7px;border-top:1px solid #e1e6ec;width:160px;min-height:55px;font-size:10px;line-height:1.3;color:#4b5563}
+    .receipt .teacherTinyText b{display:block;font-size:11px;color:#26323d}.receipt .sig{font-family:cursive;font-size:25px;height:58px;display:flex;align-items:center;justify-content:center;width:160px}
+    .receipt .small{font-size:11px}.mut{color:#667085}
+    @page{size:A4 portrait;margin:12mm}@media print{body{background:#fff}.printWrap{padding:0}.receipt{max-width:none;border:0;border-radius:0;box-shadow:none}.receipt .receiptHead{print-color-adjust:exact;-webkit-print-color-adjust:exact}.receipt th,.receipt .totalBox{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+  </style>`;
+  return '<!doctype html><html><head><meta charset="utf-8"><title>Tuition Fee Receipt</title>'+styles+'</head><body><div class="printWrap">'+el.outerHTML+'</div></body></html>';
+}
+function printReceiptOnly(){
+  let el=document.getElementById('printReceipt');if(!el)return toast('No receipt selected');
+  let w=window.open('','_blank','width=850,height=1100');if(!w)return toast('Popup blocked. Please allow popups to print receipt');
+  w.document.write(receiptPrintDocument(el));w.document.close();
+  setTimeout(()=>{w.focus();w.print();w.close()},400);
+}
+function downloadReceipt(){
+  let el=document.getElementById('printReceipt');if(!el)return toast('No receipt selected');
+  let w=window.open('','_blank','width=850,height=1100');if(!w)return toast('Allow popups to print/save receipt as PDF');
+  w.document.write(receiptPrintDocument(el).replace('</body>','<script>window.onload=function(){setTimeout(function(){window.print()},250)}<\/script></body>'));
+  w.document.close();
+}
+function shareReceipt(){let r=lastReceipt;if(!r)return toast('No receipt selected');let s=S.students.find(x=>x.id===r.id),msg='Tuition payment receipt: '+s.name+' • '+monthName(r.k)+' • '+money(r.amount)+' • Date: '+(r.date||'');if(navigator.share){navigator.share({title:'Tuition Payment Receipt',text:msg}).catch(()=>{})}else if(navigator.clipboard){navigator.clipboard.writeText(msg);toast('Receipt details copied — share from your phone')}}
+function waReceipt(){let r=lastReceipt;if(!r)return;let s=S.students.find(x=>x.id===r.id);open('https://wa.me/?text='+encodeURIComponent('Tuition payment received for '+s.name+'. Amount: '+money(r.amount)+'. Remaining due: '+money(Math.max(0,monthSalary(s,r.k)-(s.pay[r.k]?.received||0)))+'. Thank you.'),'_blank')}
+function waStu(id){let s=S.students.find(x=>x.id===id);open('https://wa.me/'+(s.phone||'')+'?text='+encodeURIComponent('Tuition update for '+s.name+'. Monthly fee: '+money(s.salary)+'.'),'_blank')}function callStu(id){location.href='tel:'+S.students.find(x=>x.id===id).phone}
+let searchTimer=null;
+function searchAll(q){
+  q=String(q||'').trim();
+  clearTimeout(searchTimer);
+  const input=document.querySelector('#home .search input');
+  let box=document.getElementById('homeSearchSuggestions');
+  if(!box && input){
+    box=document.createElement('div');
+    box.id='homeSearchSuggestions';
+    box.className='searchSuggestions';
+    input.parentElement.appendChild(box);
+  }
+  if(!q){
+    if(box){box.innerHTML='';box.classList.remove('open');}
+    if(input) input.setAttribute('aria-expanded','false');
+    return;
+  }
+  if(input) input.setAttribute('aria-expanded','true');
+  searchTimer=setTimeout(()=>{
+    if(!S)return;
+    const term=q.toLowerCase();
+    const a=S.students.filter(s=>(s.name+' '+s.school+' '+s.subject+' '+(s.className||'')+' '+(s.guardian||'')).toLowerCase().includes(term)).slice(0,6);
+    if(box){
+      box.innerHTML=a.map(s=>'<button type="button" class="searchSuggestion" onclick="openProfile(\''+s.id+'\');this.parentElement.classList.remove(\'open\')"><span><b>'+esc(s.name)+'</b><small>'+esc(s.school||'')+(s.subject?' • '+esc(s.subject):'')+'</small></span><span>›</span></button>').join('') || '<div class="searchNoResult">No matching student</div>';
+      box.classList.add('open');
+    }
+    results.innerHTML=a.map(s=>'<div class="card"><b>'+esc(s.name)+'</b><br>'+esc(s.school)+'<br><button class="btn blue" onclick="openProfile(\''+s.id+'\')">Open Profile</button></div>').join('')||'<div class="card">No result.</div>';
+  },180);
+}
+function submitHomeSearch(){
+  const input=document.querySelector('#home .search input');
+  const q=String(input?.value||'').trim();
+  if(!q)return;
+  const box=document.getElementById('homeSearchSuggestions');
+  if(box)box.classList.remove('open');
+  page('search');
+}
+function closeHomeSearchSuggestions(e){
+  const wrap=document.querySelector('#home .search');
+  if(wrap && !wrap.contains(e.target)){const box=document.getElementById('homeSearchSuggestions');if(box)box.classList.remove('open');}
+}
+document.addEventListener('click',closeHomeSearchSuggestions);
+function editTeacherProfile(){let u=S.user||{};modal.innerHTML='<h2>👨‍🏫 Edit My Profile / CV</h2><p class="mut small">Fill in every CV field. The uploaded signature will automatically be used on payment receipts.</p><div class="formgrid"><div class="field full"><label>Full Name</label><input id="tpName" value="'+esc(u.name||'')+'"></div><div class="field"><label>Email</label><input id="tpEmail" value="'+esc(u.email||'')+'"></div><div class="field"><label>Phone</label><input id="tpPhone" value="'+esc(u.phone||'')+'"></div><div class="field full"><label>Address</label><input id="tpAddress" value="'+esc(u.address||'')+'"></div><div class="field"><label>Education</label><input id="tpEducation" value="'+esc(u.education||'')+'"></div><div class="field"><label>University</label><input id="tpUniversity" value="'+esc(u.university||'')+'"></div><div class="field"><label>Designation</label><input id="tpDesignation" value="'+esc(u.designation||'')+'"></div><div class="field"><label>Institution</label><input id="tpInstitution" value="'+esc(u.institution||'')+'"></div><div class="field"><label>Date of Birth</label><input id="tpDob" type="date" value="'+esc(u.dob||'')+'"></div><div class="field"><label>Subjects</label><input id="tpSubjects" value="'+esc(u.subjects||'')+'"></div><div class="field full"><label>Experience</label><textarea id="tpExperience" rows="3">'+esc(u.experience||'')+'</textarea></div><div class="field full"><label>Skills</label><textarea id="tpSkills" rows="3">'+esc(u.skills||'')+'</textarea></div><div class="field full"><label>Professional Summary / About</label><textarea id="tpAbout" rows="4">'+esc(u.about||'')+'</textarea></div><div class="field full"><label>Website / Facebook / LinkedIn</label><input id="tpSocial" value="'+esc(u.social||'')+'"></div><div class="field full"><label>Certifications / Training</label><textarea id="tpCertifications" rows="2">'+esc(u.certifications||'')+'</textarea></div><div class="field full"><label>Achievements / Awards</label><textarea id="tpAchievements" rows="2">'+esc(u.achievements||'')+'</textarea></div><div class="field"><label>Languages</label><input id="tpLanguages" value="'+esc(u.languages||'')+'"></div><div class="field"><label>Availability</label><input id="tpAvailability" value="'+esc(u.availability||'')+'"></div><div class="field full"><label>Teaching Methods</label><textarea id="tpMethods" rows="2">'+esc(u.teachingMethods||'')+'</textarea></div><div class="field full"><label>References</label><textarea id="tpReferences" rows="2">'+esc(u.references||'')+'</textarea></div><div class="field full"><label>Portfolio / Work Link</label><input id="tpPortfolio" value="'+esc(u.portfolio||'')+'"></div><div class="field"><label>Profile Photo</label><input id="tpPhoto" type="file" accept="image/*"></div><div class="field"><label>Signature (used on receipts)</label><input id="tpSignature" type="file" accept="image/*"></div></div><div id="tpPreview" class="card"></div><div class="btnrow"><button class="btn green" onclick="saveTeacherProfile()">✓ Save Profile</button><button class="btn" onclick="closeModal()">Cancel</button></div>';modalWrap.classList.add('open');renderTeacherPreview()}
+function renderTeacherPreview(){let u=S.user||{};tpPreview.innerHTML='<div class="profileHead">'+(u.photo?'<img class="avatar" src="'+u.photo+'">':'<div class="avatar" style="display:grid;place-items:center;font-size:28px">👨‍🏫</div>')+'<div><b>'+esc(u.name||'Teacher')+'</b><div class="mut small">'+esc(u.designation||'Teacher')+'</div></div></div>'+(u.signature?'<div style="margin-top:12px"><span class="mut small">Receipt signature:</span><br><img src="'+u.signature+'" style="max-width:160px;max-height:70px"></div>':'')}
+function saveTeacherProfile(){S.user.name=tpName.value.trim()||'Teacher';S.user.email=tpEmail.value.trim();S.user.phone=tpPhone.value.trim();S.user.address=tpAddress.value.trim();S.user.education=tpEducation.value.trim();S.user.university=tpUniversity.value.trim();S.user.designation=tpDesignation.value.trim();S.user.institution=tpInstitution.value.trim();S.user.dob=tpDob.value;S.user.subjects=tpSubjects.value.trim();S.user.experience=tpExperience.value.trim();S.user.skills=tpSkills.value.trim();S.user.about=tpAbout.value.trim();S.user.social=tpSocial.value.trim();S.user.certifications=tpCertifications.value.trim();S.user.achievements=tpAchievements.value.trim();S.user.languages=tpLanguages.value.trim();S.user.availability=tpAvailability.value.trim();S.user.teachingMethods=tpMethods.value.trim();S.user.references=tpReferences.value.trim();S.user.portfolio=tpPortfolio.value.trim();let pending=0,done=()=>{if(--pending<=0){save();closeModal();renderAll();toast('Teacher profile/CV saved ✓')}};for(let [el,type] of [[tpPhoto,'photo'],[tpSignature,'signature']]){let f=el.files&&el.files[0];if(f){pending++;let r=new FileReader();r.onload=()=>{S.user[type]=r.result;done()};r.readAsDataURL(f)}}if(!pending){save();closeModal();renderAll();toast('Teacher profile/CV saved ✓')}}
+function renderSettings(){setName.value=S.user.name;setEmail.value=S.user.email;setUni.value=S.user.university;setAbout.value=S.user.about;setPhone.value=S.user.phone||'';setAddress.value=S.user.address||'';setEducation.value=S.user.education||'';setExperience.value=S.user.experience||'';setSkills.value=S.user.skills||'';setDesignation.value=S.user.designation||'';setInstitution.value=S.user.institution||'';setDob.value=S.user.dob||'';setSubjects.value=S.user.subjects||'';setSocial.value=S.user.social||'';incomeTarget.value=S.settings.incomeTarget||0;autoSave.value=S.settings.auto;autoInterval.value=S.settings.interval;accountInfo.textContent=S.user.id+' • Data stored locally'}
+function saveProfileSettings(){S.user.name=setName.value.trim()||S.user.name;S.user.email=setEmail.value.trim()||'mdraselch04@gmail.com';S.user.university=setUni.value.trim()||'Dhaka Central University';S.user.about=setAbout.value.trim();S.user.phone=setPhone.value.trim();S.user.address=setAddress.value.trim();S.user.education=setEducation.value.trim();S.user.experience=setExperience.value.trim();S.user.skills=setSkills.value.trim();S.user.designation=setDesignation.value.trim();S.user.institution=setInstitution.value.trim();S.user.dob=setDob.value;S.user.subjects=setSubjects.value.trim();S.user.social=setSocial.value.trim();save();renderAll();toast('Teacher profile saved ✓')}
+function saveTarget(){S.settings.incomeTarget=Number(incomeTarget.value)||0;save();renderAll();toast('Income target saved ✓')}
+function loadImage(input,type){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{S.user[type==='photo'?'photo':'signature']=r.result;save();renderAll();toast('Image saved ✓')};r.readAsDataURL(f)}
+function saveSettings(){S.settings.auto='ON';S.settings.interval=1;autoSave.value='ON';autoInterval.value='1';save();resetAutoSaveTimer();toast('Auto save + backup set to every 1 minute ✓')}
+function toggleDark(){S.dark=!S.dark;save();renderAll()}
+async function digest(obj){try{let data=new TextEncoder().encode(JSON.stringify(obj));let hash=await crypto.subtle.digest('SHA-256',data);return [...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){return ''}}
+async function downloadBackup(){let payload={format:'MY_TUITION_MANAGER_BACKUP',version:6,exportedAt:new Date().toISOString(),user:{...S.user,password:undefined},students:S.students,events:S.events,tasks:S.tasks||[],dark:S.dark,settings:S.settings};let core=JSON.parse(JSON.stringify(payload));core.user.password=undefined;let hash=await digest(core);let backup={...core,checksum:hash};downloadText(JSON.stringify(backup,null,2),(S.user.name||'user').replace(/[^a-z0-9 _-]/gi,'_')+'_Local_Backup.json','application/json');toast('Backup downloaded ✓')}
+async function restoreObj(o){if(!o||!Array.isArray(o.students)||!o.user)return toast('Invalid backup');let copy=JSON.parse(JSON.stringify(o));let provided=copy.checksum||'';delete copy.checksum;delete copy.user.password;let actual=await digest(copy);if(provided&&actual!==provided)return toast('Backup integrity check failed');let id=o.user.id||o.user.name||'restored_'+Date.now();S={version:6,user:{...o.user,password:accounts[id]?.user?.password||''},students:o.students.map(normalizeStudent),events:o.events||[],tasks:o.tasks||[],dark:!!o.dark,settings:o.settings||{auto:'ON',interval:1}};if(!S.user.password)S.user.password='';accounts[id]=S;activeUser=id;localStorage.setItem(ACTIVE,id);save();showApp();toast('Backup restored ✓')}
+function restoreLogin(){let f=loginFile.files[0];if(!f)return toast('Select backup');let r=new FileReader();r.onload=()=>{try{restoreObj(JSON.parse(r.result))}catch(e){toast('Invalid backup')}};r.readAsText(f)}function restoreSettings(){let f=restoreFile.files[0];if(!f)return toast('Select backup');let r=new FileReader();r.onload=()=>{try{restoreObj(JSON.parse(r.result))}catch(e){toast('Invalid backup')}};r.readAsText(f)}
+function downloadText(txt,name,type){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function downloadApp(){let clone=document.documentElement.cloneNode(true);clone.querySelectorAll('input').forEach(x=>{x.removeAttribute('value');x.value=''});clone.querySelectorAll('textarea').forEach(x=>{x.textContent='';x.value=''});clone.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));clone.querySelector('#home')?.classList.add('active');let script=[...clone.querySelectorAll('script')].pop();if(script){script.textContent=script.textContent.replace(/let accounts=JSON\.parse\(localStorage\.getItem\(STORE\)\|\|'\{\}'\);let activeUser=localStorage\.getItem\(ACTIVE\)\|\|'';/,'let accounts={};let activeUser=\"\";');script.textContent=script.textContent.replace(/if\(activeUser&&accounts\[activeUser\]\)\{S=accounts\[activeUser\];showApp\(\)\}else showLogin\(\);/,'showLogin();');}downloadText('<!doctype html>\n'+clone.outerHTML,'My_Tuition_Manager_Production.html','text/html');toast('App-only HTML downloaded — backup data excluded')}
+function setAttendance(id,status){let s=S.students.find(x=>x.id===id);let k=new Date().toISOString().slice(0,10);s.attendance[k]=status;s.history[k]={status:status==='present'?'taught':status};if(status==='present'&&!s.taught.includes(k))s.taught.push(k);if(status==='absent')s.taught=s.taught.filter(x=>x!==k);save();renderAll();openProfile(id);toast(status==='present'?'Present marked ✓':'Absent marked')}
+function addTask(){let text=taskText.value.trim();if(!text)return toast('Write a task');S.tasks.push({id:uid(),text,date:taskDate.value||new Date().toISOString().slice(0,10),priority:taskPriority.value,done:false});save();taskText.value='';renderTasks();toast('Task added ✓')}
+function renderTasks(){let a=(S.tasks||[]).slice().sort((x,y)=>Number(x.done)-Number(y.done)||x.date.localeCompare(y.date));taskList.innerHTML=a.map(t=>'<div class="card"><div class="row"><b class="'+(t.done?'mut':'')+'">'+(t.done?'✓ ':'')+esc(t.text)+'</b><span class="badge '+(t.priority==='Urgent'?'bred':t.priority==='High'?'byellow':'bblue')+'">'+esc(t.priority)+'</span></div><p class="mut small">Due: '+esc(t.date)+'</p><div class="btnrow"><button class="btn green" onclick="toggleTask(\''+t.id+'\')">'+(t.done?'↩️ Undo':'✓ Done')+'</button><button class="btn red" onclick="deleteTask(\''+t.id+'\')">Delete</button></div></div>').join('')||'<div class="card">No tasks.</div>'}
+function toggleTask(id){let t=S.tasks.find(x=>x.id===id);if(t)t.done=!t.done;save();renderTasks()}function deleteTask(id){S.tasks=S.tasks.filter(x=>x.id!==id);save();renderTasks()}
+let calCursor=new Date();
+function changeCal(n){calCursor=new Date(calCursor.getFullYear(),calCursor.getMonth()+n,1);renderCalendar()}
+function renderCalendar(){let y=calCursor.getFullYear(),m=calCursor.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();calTitle.textContent=new Date(y,m,1).toLocaleString('en',{month:'long',year:'numeric'});let h=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>'<div class="calhead">'+x+'</div>').join('');for(let i=0;i<first;i++)h+='<div></div>';for(let d=1;d<=days;d++){let k=key(y,m+1)+'-'+String(d).padStart(2,'0'),events=(S.events||[]).filter(e=>e.date===k),dayName=DAYS[new Date(k+'T00:00:00').getDay()],classes=S.students.filter(running).flatMap(s=>s.routine.filter(r=>r.enabled&&r.day===dayName));let cls=events.length?'resched':classes.length?'taught':'';h+='<button class="day '+cls+'" onclick="calendarDay(\''+k+'\')">'+d+(events.length?' •':'')+'</button>'}smartCalendar.innerHTML=h;calDetails.innerHTML='<div class="card"><b>Legend:</b> 🟢 Tuition day • 🔵 Event / exam</div>'}
+function calendarDay(k){let ev=(S.events||[]).filter(e=>e.date===k),dayName=DAYS[new Date(k+'T00:00:00').getDay()],st=S.students.filter(running).filter(s=>s.routine.some(r=>r.enabled&&r.day===dayName));calDetails.innerHTML='<div class="card"><h3>'+k+'</h3>'+st.map(s=>'<div class="listitem">🎓 '+esc(s.name)+'</div>').join('')+ev.map(e=>'<div class="listitem">🏫 '+esc(e.type)+': '+esc(e.title)+' • '+esc(e.time)+'</div>').join('')+'</div>'}
+function updateCountdown(){let u=upcoming();if(!nextCountdown)return;if(!u){nextCountdown.textContent='';return}let now=new Date(),d=new Date(now),[h,m]=u.r.start.split(':').map(Number);d.setHours(h,m,0,0);let diff=Math.max(0,d-now),mins=Math.floor(diff/60000),secs=Math.floor(diff/1000)%60;nextCountdown.textContent='Starts in '+mins+'m '+secs+'s'}
+function clock(){let d=new Date(),s=d.getSeconds(),m=d.getMinutes(),h=d.getHours()%12,H=document.getElementById('hh'),M=document.getElementById('mm'),Sx=document.getElementById('ss');if(H)H.style.transform='rotate('+((h*30)+(m*.5))+'deg)';if(M)M.style.transform='rotate('+((m*6)+(s*.1))+'deg)';if(Sx)Sx.style.transform='rotate('+((s*6))+'deg)'}setInterval(function(){clock();updateCountdown();checkTomorrowRoutine()},1000);clock();updateCountdown();checkTomorrowRoutine();
+try{if(activeUser&&accounts[activeUser]){S=accounts[activeUser];S.students=(S.students||[]).map(normalizeStudent);S.settings=S.settings||{auto:'ON',interval:1,incomeTarget:50000};S.tasks=S.tasks||[];showApp()}else{activeUser='';localStorage.removeItem(ACTIVE);showLogin()}}catch(e){activeUser='';S=null;try{localStorage.removeItem(ACTIVE)}catch(_e){}showLogin()}
+if(window.MTM_FIREBASE_ENABLED){mtmSetFirebaseStatus('Connected ✓')}else{mtmSetFirebaseStatus('Not configured — local backup still active')}
+if(window.MTM_FIREBASE_ENABLED&&window.MTM_FIREBASE_AUTH){window.MTM_FIREBASE_AUTH.onAuthStateChanged(async user=>{
+  if(user){
+    window.MTM_FIREBASE_UID=user.uid;mtmSetFirebaseStatus('Connected • '+(user.email||'online'));
+    const cloud=await mtmCloudLoad(user.uid);
+    if(cloud&&cloud.user){
+      S=cloud;S.user=S.user||{};S.user.email=user.email||S.user.email;S.user.firebaseUid=user.uid;delete S.user.password;
+      activeUser=S.user.id||user.email;accounts[activeUser]=S;localStorage.setItem(ACTIVE,activeUser);saveAccounts();
+      try{S.students=(S.students||[]).map(normalizeStudent);S.settings=S.settings||{auto:'ON',interval:1,incomeTarget:50000};S.tasks=S.tasks||[];}catch(e){}
+      showApp();
+      toast('Cloud data synced ✓');
+    }else if(S){
+      await mtmCloudSave('auth-state');
+    }
+  }else{window.MTM_FIREBASE_UID='';}
+})}
+let autoSaveTimer=null;
+function resetAutoSaveTimer(){
+  if(autoSaveTimer)clearInterval(autoSaveTimer);
+  const mins=Math.max(1,Number(S?.settings?.interval)||1);
+  autoSaveTimer=setInterval(()=>{
+    if(S&&activeUser){
+      save();
+      if(window.mtmAutoBackupNow)window.mtmAutoBackupNow();
+    }
+  },mins*60000);
+}
+resetAutoSaveTimer();
+</script><script id="v13-storage-layer">
+(function(){
+  'use strict';
+
+  /*
+   * V13 resilient local persistence layer.
+   * - Primary live data: localStorage (existing MTM_V3_ACCOUNTS / MTM_V3_ACTIVE)
+   * - Durable backup: IndexedDB
+   * - Rolling automatic snapshots: last 10 backups
+   * - Immediate save after app save(), every minute, visibility/pagehide/beforeunload
+   * - Automatic recovery from IndexedDB if localStorage is empty/corrupt
+   * No server/cloud dependency: this is designed for a GitHub Pages/static website.
+   */
+
+  const DB_NAME='MyTuitionManagerDataDB_V13';
+  const DB_VERSION=1;
+  const DATA_STORE='appData';
+  const BACKUP_STORE='autoBackups';
+  const LATEST_KEY='latest';
+  const MAX_BACKUPS=10;
+  let dbPromise=null;
+  let saveTimer=null;
+  let lastSavedSignature='';
+  let recoveryStarted=false;
+
+  function clone(v){
+    try{return JSON.parse(JSON.stringify(v));}catch(e){return v;}
+  }
+
+  function openDB(){
+    if(dbPromise)return dbPromise;
+    dbPromise=new Promise(resolve=>{
+      if(!window.indexedDB){resolve(null);return;}
+      let req;
+      try{req=indexedDB.open(DB_NAME,DB_VERSION);}catch(e){resolve(null);return;}
+      req.onupgradeneeded=function(){
+        const db=req.result;
+        if(!db.objectStoreNames.contains(DATA_STORE))db.createObjectStore(DATA_STORE);
+        if(!db.objectStoreNames.contains(BACKUP_STORE))db.createObjectStore(BACKUP_STORE);
+      };
+      req.onsuccess=function(){resolve(req.result);};
+      req.onerror=function(){resolve(null);};
+      req.onblocked=function(){resolve(null);};
+    });
+    return dbPromise;
+  }
+
+  function readLocalStorage(){
+    const out={};
+    try{
+      for(let i=0;i<localStorage.length;i++){
+        const k=localStorage.key(i);
+        if(k)out[k]=localStorage.getItem(k);
+      }
+    }catch(e){}
+    return out;
+  }
+
+  function buildSnapshot(reason){
+    const ls=readLocalStorage();
+    let accountsCopy=null,active='';
+    try{
+      const raw=ls[STORE];
+      if(raw)accountsCopy=JSON.parse(raw);
+    }catch(e){}
+    active=ls[ACTIVE]||'';
+    return {
+      format:'MY_TUITION_MANAGER_AUTO_BACKUP',
+      version:13,
+      savedAt:new Date().toISOString(),
+      reason:reason||'auto',
+      activeUser:active,
+      accounts:accountsCopy,
+      localStorage:ls
+    };
+  }
+
+  function signature(snapshot){
+    try{
+      return JSON.stringify([
+        snapshot.activeUser,
+        snapshot.localStorage && snapshot.localStorage[STORE] || '',
+        snapshot.localStorage && snapshot.localStorage[ACTIVE] || ''
+      ]);
+    }catch(e){return '';}
+  }
+
+  async function persistSnapshot(reason,force){
+    const snap=buildSnapshot(reason);
+    const sig=signature(snap);
+    if(!force && sig===lastSavedSignature)return;
+    lastSavedSignature=sig;
+
+    const db=await openDB();
+    if(!db){
+      // Fallback snapshot inside localStorage when IndexedDB is unavailable.
+      try{
+        localStorage.setItem('MTM_AUTO_BACKUP_LATEST',JSON.stringify(snap));
+        localStorage.setItem('MTM_AUTO_BACKUP_SAVED_AT',snap.savedAt);
+      }catch(e){}
+      window.dispatchEvent(new CustomEvent('mtm:autosaved',{detail:{at:snap.savedAt,ok:false,reason:reason||'auto'}}));
+      return;
+    }
+
+    await new Promise(resolve=>{
+      let tx;
+      try{
+        tx=db.transaction([DATA_STORE,BACKUP_STORE],'readwrite');
+        tx.objectStore(DATA_STORE).put(snap,LATEST_KEY);
+        // Timestamp-keyed rolling history.
+        tx.objectStore(BACKUP_STORE).put(snap,snap.savedAt+'_'+Math.random().toString(36).slice(2,8));
+        tx.oncomplete=resolve;
+        tx.onerror=resolve;
+        tx.onabort=resolve;
+      }catch(e){resolve();}
+    });
+
+    // Keep only the newest MAX_BACKUPS snapshots.
+    try{
+      const keys=await new Promise(resolve=>{
+        const tx=db.transaction(BACKUP_STORE,'readonly');
+        const req=tx.objectStore(BACKUP_STORE).getAllKeys();
+        req.onsuccess=()=>resolve(req.result||[]);
+        req.onerror=()=>resolve([]);
+      });
+      if(keys.length>MAX_BACKUPS){
+        keys.sort();
+        const remove=keys.slice(0,keys.length-MAX_BACKUPS);
+        await new Promise(resolve=>{
+          const tx=db.transaction(BACKUP_STORE,'readwrite');
+          remove.forEach(k=>tx.objectStore(BACKUP_STORE).delete(k));
+          tx.oncomplete=resolve;tx.onerror=resolve;tx.onabort=resolve;
+        });
+      }
+    }catch(e){}
+
+    window.dispatchEvent(new CustomEvent('mtm:autosaved',{detail:{at:snap.savedAt,ok:true,reason:reason||'auto'}}));
+  }
+
+  async function readLatest(){
+    const db=await openDB();
+    if(db){
+      return await new Promise(resolve=>{
+        try{
+          const tx=db.transaction(DATA_STORE,'readonly');
+          const req=tx.objectStore(DATA_STORE).get(LATEST_KEY);
+          req.onsuccess=()=>resolve(req.result||null);
+          req.onerror=()=>resolve(null);
+        }catch(e){resolve(null);}
+      });
+    }
+    try{
+      const raw=localStorage.getItem('MTM_AUTO_BACKUP_LATEST');
+      return raw?JSON.parse(raw):null;
+    }catch(e){return null;}
+  }
+
+  function localDataIsValid(){
+    try{
+      const raw=localStorage.getItem(STORE);
+      if(!raw)return false;
+      const obj=JSON.parse(raw);
+      return !!obj && typeof obj==='object' && !Array.isArray(obj) &&
+        Object.keys(obj).some(k=>obj[k]&&obj[k].user);
+    }catch(e){return false;}
+  }
+
+  async function recoverIfNeeded(){
+    if(recoveryStarted)return;
+    recoveryStarted=true;
+    if(localDataIsValid())return;
+
+    const snap=await readLatest();
+    if(!snap)return;
+
+    try{
+      const ls=snap.localStorage||{};
+      // Restore the full localStorage snapshot, not just student data.
+      Object.keys(ls).forEach(k=>{
+        if(ls[k]!==undefined && ls[k]!==null)localStorage.setItem(k,ls[k]);
+      });
+      if(snap.activeUser)localStorage.setItem(ACTIVE,snap.activeUser);
+
+      // Refresh the in-memory variables used by the existing application.
+      try{
+        const raw=localStorage.getItem(STORE);
+        accounts=raw?JSON.parse(raw):{};
+      }catch(e){accounts={};}
+      activeUser=localStorage.getItem(ACTIVE)||'';
+
+      if(activeUser && accounts[activeUser]){
+        S=accounts[activeUser];
+        S.students=(S.students||[]).map(normalizeStudent);
+        S.settings=S.settings||{auto:'ON',interval:1,incomeTarget:50000};
+        S.tasks=S.tasks||[];
+        showApp();
+        toast('Auto backup recovered ✓');
+      }
+    }catch(e){}
+  }
+
+  // Public hooks used by the existing app.
+  window.mtmSaveLargeState=function(){return persistSnapshot('save',true);};
+  window.mtmAutoBackupNow=function(){return persistSnapshot('manual',true);};
+  window.mtmRestoreLatestAutoBackup=async function(){
+    const snap=await readLatest();
+    if(!snap||!snap.localStorage)return false;
+    try{
+      Object.keys(snap.localStorage).forEach(k=>localStorage.setItem(k,snap.localStorage[k]));
+      accounts=JSON.parse(localStorage.getItem(STORE)||'{}');
+      activeUser=localStorage.getItem(ACTIVE)||'';
+      if(activeUser&&accounts[activeUser]){
+        S=accounts[activeUser];
+        S.students=(S.students||[]).map(normalizeStudent);
+        S.settings=S.settings||{auto:'ON',interval:1,incomeTarget:50000};
+        S.tasks=S.tasks||[];
+        showApp();
+      }
+      return true;
+    }catch(e){return false;}
+  };
+
+  // Save immediately once after the current app has loaded.
+  setTimeout(()=>persistSnapshot('startup',true),1200);
+
+  // Automatic durable backup every minute.
+  setInterval(()=>{if(S&&activeUser)persistSnapshot('interval',true);},60000);
+
+  // Also save when the tab is backgrounded or the page is leaving.
+  document.addEventListener('visibilitychange',function(){
+    if(document.visibilityState==='hidden' && S && activeUser)persistSnapshot('background',true);
+  });
+  window.addEventListener('pagehide',function(){if(S&&activeUser)persistSnapshot('pagehide',true);});
+  window.addEventListener('beforeunload',function(){if(S&&activeUser)persistSnapshot('beforeunload',true);});
+
+  // Expose teaching-day backup helper without changing routine logic.
+  window.mtmTeachingDayBackup=function(student){
+    try{
+      const k='MTM_TAUGHT_DAYS';
+      const all=JSON.parse(localStorage.getItem(k)||'{}');
+      if(student&&student.id!=null){
+        all[String(student.id)]=student.taughtDays||student.teachingDays||student.taughtDay||[];
+        localStorage.setItem(k,JSON.stringify(all));
+        persistSnapshot('teaching-day',true);
+      }
+      return all;
+    }catch(e){return {};}
+  };
+
+  // If localStorage was cleared/corrupted, restore the latest durable snapshot.
+  setTimeout(recoverIfNeeded,1500);
+})();
+</script>
+<script id="v8-performance-layer">
+(function(){
+  // Defer non-critical images and avoid repeated layout work.
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('img:not([loading])').forEach(function(img){img.loading='lazy';});
+  },{once:true});
+  // Yield long synchronous UI work when requestIdleCallback is available.
+  window.mtmIdle=function(fn){
+    if('requestIdleCallback' in window) requestIdleCallback(fn,{timeout:500});
+    else setTimeout(fn,0);
+  };
+})();
+</script>
+<script id="v10-income-audit">
+(function(){
+function yearsFromData(){const ys=new Set([new Date().getFullYear()]);(S.students||[]).forEach(s=>[s.start,s.end,...Object.keys(s.pay||{})].filter(Boolean).forEach(x=>{let y=String(x).slice(0,4);if(/^20\d{2}$/.test(y))ys.add(+y)}));return [...ys].sort((a,b)=>b-a)}
+function getRows(mode){let years=mode==='all'?yearsFromData():[new Date().getFullYear()],rows=[];years.forEach(y=>(S.students||[]).filter(s=>studentYears(s).includes(y)).forEach(s=>{let months=[],total=0;for(let m=1;m<=12;m++){let k=key(y,m),p=s.pay?.[k]||{},rec=Number(p.received||0);if(activeMonths(s,y).includes(k)&&!p.na&&monthStatus(s,k)!=='pending')total+=rec;months.push(rec)}rows.push({year:y,name:s.name,school:s.school||'',salary:Number(s.salary||0),months,total})}));return{years,rows}}
+function csv(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+window.downloadIncomeAuditCSV=function(){let d=window._auditData||{rows:[]},head=['Year','Student','School','Monthly Salary','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Total Received'],body=d.rows.map(r=>[r.year,r.name,r.school,r.salary,...r.months,r.total].map(csv).join(','));let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([[head.map(csv).join(','),...body].join('\\n')],{type:'text/csv;charset=utf-8'}));a.download='income-audit-'+(window._auditMode==='all'?'all-years':new Date().getFullYear())+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+window.printIncomeAudit=function(){let el=document.getElementById('incomeAuditPrint');if(!el)return;let w=window.open('','_blank','width=1200,height=900');if(!w)return toast('Popup blocked. Please allow popups to print audit');w.document.write('<!doctype html><html><head><title>Income Audit</title><style>body{font-family:Arial;color:#182230}.audit-sheet{padding:25px}.audit-sheet table{width:100%;border-collapse:collapse;font-size:11px}.audit-sheet th,.audit-sheet td{border:1px solid #cfd7df;padding:7px;text-align:center}.audit-sheet th{background:#edf3f7}.audit-total{font-weight:800}</style></head><body>'+el.innerHTML+'</body></html>');w.document.close();setTimeout(()=>{w.focus();w.print();w.close()},300)}
+window.openIncomeAudit=function(mode){let d=getRows(mode),grand=d.rows.reduce((a,r)=>a+r.total,0),heads=['Year','Student','School','Salary','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Total'];let body=d.rows.map(r=>'<tr><td>'+r.year+'</td><td style="text-align:left">'+esc(r.name)+'</td><td style="text-align:left">'+esc(r.school)+'</td><td>'+money(r.salary)+'</td>'+r.months.map(x=>'<td>'+money(x)+'</td>').join('')+'<td class="audit-total">'+money(r.total)+'</td></tr>').join('');modal.innerHTML='<div class="row"><h2>📊 Income Audit — '+(mode==='all'?'All Years':'Current Year')+'</h2><button class="btn" onclick="closeModal()">✕</button></div><div id="incomeAuditPrint" class="audit-print-page"><div class="audit-sheet"><h1>PAYMENT RECEIPT — Income Audit</h1><div class="mut small">Period: '+(mode==='all'?'All available years':new Date().getFullYear())+' • Generated: '+new Date().toLocaleString()+'</div><div class="grid"><div class="metric"><span class="mut">Records</span><b>'+d.rows.length+'</b></div><div class="metric"><span class="mut">Grand Total</span><b>'+money(grand)+'</b></div></div><div class="table"><table><thead><tr>'+heads.map(h=>'<th>'+h+'</th>').join('')+'</tr></thead><tbody>'+body+'</tbody><tfoot><tr><th colspan="16" style="text-align:right">Grand Total</th><th>'+money(grand)+'</th></tr></tfoot></table></div></div></div><div class="btnrow noPrint"><button class="btn blue" onclick="printIncomeAudit()">🖨️ Print / PDF</button><button class="btn green" onclick="downloadIncomeAuditCSV()">⬇️ Download Spreadsheet (CSV)</button><button class="btn" onclick="closeModal()">Close</button></div>';window._auditData=d;window._auditMode=mode;modalWrap.classList.add('open')}
+})();
+</script>
+</body></html>
